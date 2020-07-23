@@ -1,0 +1,2 @@
+<Chronicle :path='"/chronicle"'>
+</Chronicle>

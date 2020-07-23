@@ -1,0 +1,2 @@
+<Team :path='"/team"'>
+</Team>
