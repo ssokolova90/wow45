@@ -28,6 +28,7 @@ module.exports = {
    */
   themeConfig: {
     repo: '',
+    logo: '/images/assets/logo.png',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -42,9 +43,26 @@ module.exports = {
         link: '/chronicle/',
       },
       {
+        text: 'Тема парада памяти',
+        link: '/chronicle/',
+      },
+      {
         text: 'Участники',
         link: '/people/'
       },
+      {
+        text: 'Фотогаллерея',
+        link: '/chronicle/',
+      },
+      {
+        text: 'Видео',
+        link: '/chronicle/',
+      },
+      {
+        text: 'Контакты',
+        link: '/chronicle/',
+      },
+
       // {
       //   text: 'VuePress',
       //   link: 'https://v1.vuepress.vuejs.org'
