@@ -43,8 +43,8 @@ module.exports = {
         link: '/chronicle/',
       },
       {
-        text: 'Тема парада памяти',
-        link: '/theme/',
+        text: 'Темы парада памяти',
+        link: '/themes/',
       },
       {
         text: 'Участники',
@@ -62,23 +62,8 @@ module.exports = {
         text: 'Контакты',
         link: '/about/',
       },
-
-      // {
-      //   text: 'VuePress',
-      //   link: 'https://v1.vuepress.vuejs.org'
-      // }
     ],
     sidebar: {
-      // '/guide/': [
-      //   {
-      //     title: 'Guide',
-      //     collapsable: false,
-      //     children: [
-      //       '',
-      //       'using-vue',
-      //     ]
-      //   }
-      // ],
     }
   },
 

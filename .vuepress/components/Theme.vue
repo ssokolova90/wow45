@@ -1,15 +1,14 @@
-
 <template>
   <div class="theme-page">
 
     <div class="theme-page__title">
-      Темы парадов победы
+      Темы парада памяти
     </div>
 
-    <div class="posts">
+    <div class="theme-posts">
 
-      <div class="wrapper"
-           v-for="post in posts">
+      <div v-for="(post, index) in posts"
+           :class="index < 2 ? 'double-wrapper' : 'wrapper'">
         <div class="theme">
           <router-link :to="post.path">
             <div class="theme__image-wrapper">
@@ -40,7 +39,7 @@
 
         let posts = this.$site.pages.filter(x => {
           return x.path.match(new RegExp(`(${this.path})(?=.*html)`));
-        });
+        }).reverse();
         return posts;
       }
     }
@@ -56,44 +55,72 @@
       padding 40px 30px
       text-transform uppercase
 
-  .posts
-    display flex
-    flex-direction row
-    flex-wrap wrap
-    padding-left 15px
+    .theme-posts
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      padding-left 15px
 
-  .wrapper
-    display flex
-    flex 1 1 auto
-    width 645px
-    height 430px
-    border 10px solid transparent
+    .wrapper
+      display flex
+      flex 1 1 auto
+      width 307px
+      height 430px
+      border 10px solid transparent
 
-  .theme
-    display flex
-    background white
-    width 645px
-    height 430px
-    overflow hidden
+      .theme
+        display flex
+        background white
+        width 307px
+        height 430px
+        overflow hidden
 
-    &__image-wrapper
+        &__image-wrapper
+          width 308px
+          height 198px
+
+        &__image
+          width 100%
+
+        &__title
+          color #000
+          font-size 24px
+          line-height 28px
+          padding 40px 30px
+
+
+    .double-wrapper
+      display flex
+      flex 1 1 auto
       width 645px
       height 430px
-      position absolute
+      border 10px solid transparent
 
-    &__image
-      width 100%
-      height 100%
+      .theme
+        display flex
+        background white
+        width 645px
+        height 430px
+        overflow hidden
 
-    &__title
-      color #fff
-      font-size 24px
-      line-height 28px
-      padding 40px 30px
-      position relative
-      text-transform uppercase
-      max-width 350px
-      top 278px
-      left 30px
+        &__image-wrapper
+          width 645px
+          height 430px
+          position absolute
+
+        &__image
+          width 100%
+          height 100%
+
+        &__title
+          color #fff
+          font-size 24px
+          line-height 28px
+          padding 40px 30px
+          position relative
+          text-transform uppercase
+          max-width 350px
+          top 278px
+          left 30px
 
 </style>

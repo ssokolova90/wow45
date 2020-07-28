@@ -5,7 +5,7 @@
       Команда  проекта
     </div>
 
-    <div class="posts">
+    <div class="people-posts">
 
       <div class="wrapper"
            v-for="post in posts">
@@ -59,43 +59,43 @@
       padding 40px 30px
       text-transform uppercase
 
-  .posts
-    display flex
-    flex-direction row
-    flex-wrap wrap
-    padding-left 15px
+    .people-posts
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      padding-left 15px
 
-  .wrapper
-    display flex
-    flex 1 1 auto
-    width 308px
-    height 500px
-    border 10px solid transparent
-
-  .post
-    display flex
-    background white
-    width 308px
-    height 500px
-    overflow hidden
-
-    &__image-wrapper
+    .wrapper
+      display flex
+      flex 1 1 auto
       width 308px
-      height 360px
+      height 500px
+      border 10px solid transparent
 
-    &__image
-      width 100%
+    .post
+      display flex
+      background white
+      width 308px
+      height 500px
+      overflow hidden
 
-    &__person
-      color #000
-      font-size 24px
-      line-height 28px
-      padding 40px 30px
+      &__image-wrapper
+        width 308px
+        height 360px
 
-    &__position
-      color #D5AE75
-      font-size 13px
-      line-height 18px
-      padding 0 30px
+      &__image
+        width 100%
+
+      &__person
+        color #000
+        font-size 24px
+        line-height 28px
+        padding 40px 30px
+
+      &__position
+        color #D5AE75
+        font-size 13px
+        line-height 18px
+        padding 0 30px
 
 </style>
