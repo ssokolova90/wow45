@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         text: 'Тема парада памяти',
-        link: '/chronicle/',
+        link: '/theme/',
       },
       {
         text: 'Участники',
@@ -52,15 +52,15 @@ module.exports = {
       },
       {
         text: 'Фотогаллерея',
-        link: '/chronicle/',
+        link: '/photo/',
       },
       {
         text: 'Видео',
-        link: '/chronicle/',
+        link: '/video/',
       },
       {
         text: 'Контакты',
-        link: '/chronicle/',
+        link: '/about/',
       },
 
       // {

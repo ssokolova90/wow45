@@ -1,0 +1,2 @@
+<Video :path='"/video"'>
+</Video>
