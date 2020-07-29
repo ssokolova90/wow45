@@ -5,7 +5,7 @@
       Хроника
     </div>
 
-    <div class="chronicle-posts">
+    <div class="posts">
 
       <div class="wrapper"
            v-for="post in posts">
@@ -55,7 +55,7 @@
       padding 40px 30px
       text-transform uppercase
 
-    .chronicle-posts
+    .posts
       display flex
       flex-direction row
       flex-wrap wrap

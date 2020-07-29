@@ -7,6 +7,7 @@
   >
     <Navbar
       v-if="shouldShowNavbar"
+      :isMain="isMainPage"
       @toggle-sidebar="toggleSidebar"
     />
 
@@ -30,6 +31,15 @@
     </Sidebar>
 
     <div
+      v-if="isMainPage"
+      class="main-picture">
+
+      <img
+        src="/images/assets/main.jpg">
+
+    </div>
+
+    <div
       v-if="componentNameValue"
       class="custom-layout">
 
@@ -43,7 +53,6 @@
       class="custom-layout"
       v-if="$page.frontmatter.layout && !componentNameValue"
     >
-
       <component
         v-if="!componentNameValue"
         :is="$page.frontmatter.layout"/>
@@ -53,6 +62,7 @@
         :is="componentNameValue">
 
         <Page
+          :is-main="isMainPage"
           :sidebar-items="sidebarItems">
           <slot
             name="page-top"
@@ -68,6 +78,8 @@
 
     </div>
 
+
+
     <div v-else-if="$page.frontmatter.layout">
 
       <component
@@ -75,6 +87,7 @@
         :is="componentNameValue">
 
         <Page
+          :is-main="isMainPage"
           :sidebar-items="sidebarItems">
           <slot
             name="page-top"
@@ -91,8 +104,10 @@
 
     <Page
       v-if="!componentNameValue"
+      :is-main="isMainPage"
       :sidebar-items="sidebarItems"
     >
+
       <slot
         name="page-top"
         slot="top"
@@ -148,7 +163,15 @@ export default {
   },
 
   computed: {
-    componentNameValue() {
+    isMainPage() {
+
+      const detailPath = this.$page.regularPath.split('/');
+
+      return detailPath.length == 2
+        && detailPath[0].length == 0
+        && detailPath[1].length == 0;
+   },
+   componentNameValue() {
 
       const componentsMap = {
         'chronicle': 'ChronicleDetails',

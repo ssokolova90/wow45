@@ -2,7 +2,7 @@
   <div class="people">
 
     <div class="people__title">
-      Команда  проекта
+      Участники
     </div>
 
     <div class="people-posts">

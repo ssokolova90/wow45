@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header :class="isMain ? 'navbar navbar-main' : 'navbar'">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
     <router-link
@@ -38,6 +38,8 @@ import NavLinks from './NavLinks.vue'
 
 export default {
   components: { SidebarButton, NavLinks, SearchBox},
+
+  props: ['isMain'],
 
   data () {
     return {

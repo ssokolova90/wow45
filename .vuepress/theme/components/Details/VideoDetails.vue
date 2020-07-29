@@ -19,13 +19,11 @@
       <div class="video-details__position">
         {{$page.frontmatter.position}}
       </div>
-      
+
       <Content :custom="false"/>
 
     </div>
   </div>
-
-</template>
 
 </template>
 

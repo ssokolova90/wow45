@@ -1,2 +1,2 @@
-<Team :path='"/team"'>
-</Team>
+<Theme :path='"/themes"'>
+</Theme>

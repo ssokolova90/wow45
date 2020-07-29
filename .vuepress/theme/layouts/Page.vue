@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :class="isMain ? 'page page-main' : 'page'">
     <slot name="top"/>
 
     <Content :custom="false"/>
@@ -65,7 +65,7 @@
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../helpers/util'
 
 export default {
-  props: ['sidebarItems'],
+  props: ['sidebarItems', 'isMain'],
 
   computed: {
     lastUpdated () {

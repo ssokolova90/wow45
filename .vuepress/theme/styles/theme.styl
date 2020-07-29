@@ -32,6 +32,17 @@ body
   padding-left $sidebarWidth
   background: #fff;
 
+
+.page-main
+  padding-left 0
+  margin-top -6px
+  padding-top 0
+
+
+.main-picture
+  margin-top: -129px;
+
+
 .navbar
 
   display: flex;
@@ -55,6 +66,40 @@ body
   line-height 19px
   text-transform uppercase
 
+
+.navbar-main
+  display flex
+  background none
+  align-items center
+
+  //background-image url(/images/assets/main.jpg)
+  background-repeat no-repeat
+  background-size 100%
+
+  width 1400px
+  position relative
+  z-index 20
+  top 0
+  height 129px
+  box-sizing border-box
+  font-style normal
+  font-weight 600
+  font-size 15px
+  line-height 19px
+  text-transform uppercase
+
+  .nav-item
+    background none
+
+  .links
+    box-sizing border-box
+    background-color: none
+    white-space nowrap
+    position absolute
+    right 1.5rem
+    display flex
+    color #3C3C3B
+    background none
 
 .sidebar-mask
   position fixed
@@ -197,9 +242,10 @@ th, td
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-size: 50% 100%;
-  justify-content: center;
   display: flex;
   background-position: right bottom, left top;
+  flex-direction: column;
+  align-items: center;
 
 
   &.sidebar-open
@@ -222,9 +268,15 @@ th, td
     .page
       padding-left 0
       width 1380px
-      margin-top 120px
-      padding-top 9px
+      //margin-top 120px
+      //padding-top 9px
       background #e5e5e5
       box-shadow 0px 0px 25px rgba(0, 0, 0, 0.2)
+      margin-top -9px
+      padding-top 130px
+
+    .page-main
+      margin-top -6px
+      padding-top 0px
 
 @require './mobile.styl'
