@@ -118,6 +118,14 @@
       />
     </Page>
 
+
+    <div class="footer-nav">
+
+      <div class="footer-nav__about">
+        © Парад Памяти, посвящённый военному параду в г. Куйбышеве 7 ноября 1941 года.
+      </div>
+      <NavLinks class="can-hide"/>
+    </div>
     <SWUpdatePopup :updateEvent="swUpdateEvent"/>
   </div>
 </template>
@@ -138,14 +146,18 @@ import PhotoDetails from './components/Details/PhotoDetails.vue';
 import TeamDetails from './components/Details/TeamDetails.vue';
 import ThemeDetails from './components/Details/ThemeDetails.vue';
 import VideoDetails from './components/Details/VideoDetails.vue';
+import NavFooter from "./components/NavFooter.vue";
+import NavLinks from './components/NavLinks.vue';
 
 export default {
 
   components: {
+    NavFooter,
     Home,
     Page,
     Sidebar,
     Navbar,
+    NavLinks,
     SWUpdatePopup,
     ChronicleDetails,
     PeopleDetails,

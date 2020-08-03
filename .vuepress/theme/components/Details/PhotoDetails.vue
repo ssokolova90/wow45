@@ -24,9 +24,12 @@
       <Content :custom="false"/>
 
     </div>
+
+    <Photo :path='"/photo"'>
+    </Photo>
+
   </div>
 
-</template>
 </template>
 
 <script>
@@ -35,7 +38,15 @@
 </script>
 
 <style lang="stylus">
-  .photo-details {
-  }
+  .photo-details
+    margin 15px
+    padding 15px
+    background white
+    min-height 360px
+
+    &__image
+      float left
+      margin-right 15px
+      margin-bottom 15px
 
 </style>

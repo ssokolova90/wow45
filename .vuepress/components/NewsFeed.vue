@@ -1,36 +1,36 @@
 <template>
-  <div class="theme-page">
+  <div class="news-feed-page">
 
-    <div class="theme-page__title">
-      Темы парада памяти
+    <div class="news-feed-page__title">
+      Новости
     </div>
 
-    <div class="theme-posts">
+    <div class="news-feed-posts">
 
       <div v-for="(post, index) in posts"
            :class="index < 2 ? 'double-wrapper' : 'wrapper'">
-        <div class="theme">
+        <div class="news-feed">
           <router-link :to="post.path">
-            <div class="theme__image-wrapper">
+            <div class="news-feed__image-wrapper">
               <img
-                class="theme__image"
+                class="news-feed__image"
                 v-if="post.frontmatter.picture"
                 :src="$withBase(post.frontmatter.picture)"
                 alt="">
             </div>
             <div
               v-if="index > 1"
-              class="theme__theme">
+              class="news-feed__news-feed">
 
               Темы парада памяти
             </div>
 
 
-            <div class="theme__title">
+            <div class="news-feed__title">
               {{ post.frontmatter.title }}
             </div>
 
-            <div class="theme__event-date">
+            <div class="news-feed__event-date">
               {{ formateDate(post.frontmatter.event_date) }}
             </div>
           </router-link>
@@ -48,13 +48,21 @@
   import 'moment/locale/ru';
 
   export default {
-    props: ["path"],
+    data() {
+      return {
+        chronicle: '/chronicle',
+        theme: '/themes'
+      }
+    },
     computed: {
       posts() {
         console.log("this.$site", this.$site);
 
         let posts = this.$site.pages.filter(x => {
-          return x.path.match(new RegExp(`(${this.path})(?=.*html)`));
+
+          return x.path.match(new RegExp(`(${this.chronicle})(?=.*html)`))
+          //   || x.path.match(new RegExp(`(${this.theme})(?=.*html)`))
+
         }).reverse();
         return posts;
       }
@@ -73,14 +81,14 @@
 
 <style lang="stylus">
 
-  .theme-page
+  .news-feed-page
     &__title
       font-size 30px
       color #000
       padding 40px 30px
       text-transform uppercase
 
-    .theme-posts
+    .news-feed-posts
       display flex
       flex-direction row
       flex-wrap wrap
@@ -94,7 +102,7 @@
       height 430px
       border 10px solid transparent
 
-      .theme
+      .news-feed
         display flex
         background white
         width 307px
@@ -116,7 +124,7 @@
           left 30px
           position relative
 
-        &__theme
+        &__news-feed
           color #575756
           position relative
           top 15px
@@ -137,52 +145,52 @@
           font-weight normal
 
   .double-wrapper
+    display flex
+    flex 1 1 auto
+    width 645px
+    height 430px
+    border 10px solid transparent
+
+    .news-feed
       display flex
-      flex 1 1 auto
+      background white
       width 645px
       height 430px
-      border 10px solid transparent
+      overflow hidden
 
-      .theme
-        display flex
-        background white
+      &__image-wrapper
         width 645px
         height 430px
-        overflow hidden
+        position absolute
 
-        &__image-wrapper
-          width 645px
-          height 430px
-          position absolute
+      &__image
+        width 100%
+        height 430px
 
-        &__image
-          width 100%
-          height 430px
+      &__title
+        color #FFFFFF
+        font-size 24px
+        line-height 28px
+        position relative
+        text-transform uppercase
+        max-width 350px
+        top 311px
+        left 30px
 
-        &__title
-          color #FFFFFF
-          font-size 24px
-          line-height 28px
-          position relative
-          text-transform uppercase
-          max-width 350px
-          top 311px
-          left 30px
+      &__news-feed
+        color #FFFFFF
+        position relative
+        top 210px
+        left 30px
+        font-size 13px
+        line-height 18px
 
-        &__theme
-          color #FFFFFF
-          position relative
-          top 210px
-          left 30px
-          font-size 13px
-          line-height 18px
-
-        &__event-date
-          color #FFFFFF
-          position relative
-          top 369px
-          left 30px
-          font-size 13px
-          line-height 18px
+      &__event-date
+        color #FFFFFF
+        position relative
+        top 369px
+        left 30px
+        font-size 13px
+        line-height 18px
 
 </style>

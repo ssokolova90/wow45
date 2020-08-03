@@ -24,9 +24,11 @@
       <Content :custom="false"/>
 
     </div>
-  </div>
 
-</template>
+    <Team :path='"/team"'>
+    </Team>
+
+  </div>
 
 </template>
 
@@ -36,7 +38,16 @@
 </script>
 
 <style lang="stylus">
-  .team-details {
-  }
+
+  .team-details
+    margin 15px
+    padding 15px
+    background white
+    min-height 360px
+
+    &__image
+      float left
+      margin-right 15px
+      margin-bottom 15px
 
 </style>

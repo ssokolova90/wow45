@@ -24,9 +24,11 @@
       <Content :custom="false"/>
 
     </div>
-  </div>
 
-</template>
+    <Theme :path='"/themes"'>
+    </Theme>
+
+  </div>
 
 </template>
 
@@ -36,7 +38,15 @@
 </script>
 
 <style lang="stylus">
-  .theme-details {
-  }
+  .theme-details
+    margin 15px
+    padding 15px
+    background white
+    min-height 345px
+
+    &__image
+      float left
+      margin-right 15px
+      margin-bottom 15px
 
 </style>

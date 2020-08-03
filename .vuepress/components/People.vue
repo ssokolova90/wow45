@@ -69,14 +69,13 @@
       display flex
       flex 1 1 auto
       width 308px
-      height 500px
+      height 346px
       border 10px solid transparent
 
     .post
       display flex
       background white
       width 308px
-      height 500px
       overflow hidden
 
       &__image-wrapper
@@ -91,11 +90,16 @@
         font-size 24px
         line-height 28px
         padding 40px 30px
+        position relative
+        top -160px
+        color white
 
       &__position
         color #D5AE75
         font-size 13px
         line-height 18px
         padding 0 30px
+        position relative
+        top -169px
 
 </style>

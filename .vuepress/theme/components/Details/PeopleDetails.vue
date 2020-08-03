@@ -24,9 +24,12 @@
       <Content :custom="false"/>
 
     </div>
+
+    <People :path='"/people"'>
+    </People>
+
   </div>
 
-</template>
 </template>
 
 <script>
@@ -35,7 +38,15 @@
 </script>
 
 <style lang="stylus">
-  .people-details {
-  }
+  .people-details
+    margin 15px
+    padding 15px
+    background white
+    min-height 345px
+
+    &__image
+      float left
+      margin-right 15px
+      margin-bottom 15px
 
 </style>
