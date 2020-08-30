@@ -20,7 +20,6 @@
         {{$page.frontmatter.position}}
       </div>
 
-
       <Content :custom="false"/>
 
     </div>
@@ -37,17 +36,18 @@
   };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
-  .team-details
-    margin 15px
-    padding 15px
-    background white
-    min-height 360px
+  .team-details {
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    min-height: 360px;
 
-    &__image
-      float left
-      margin-right 15px
-      margin-bottom 15px
-
+    &__image {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
 </style>

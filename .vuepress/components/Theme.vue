@@ -136,53 +136,60 @@
           font-style normal
           font-weight normal
 
-  .double-wrapper
-      display flex
-      flex 1 1 auto
-      width 645px
-      height 430px
-      border 10px solid transparent
+  .double-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    width: 645px;
+    height: 430px;
+    border: 10px solid transparent;
 
-      .theme
-        display flex
-        background white
-        width 645px
-        height 430px
-        overflow hidden
+    .theme {
+      display: flex;
+      background: white;
+      width: 645px;
+      height: 430px;
+      overflow: hidden;
 
-        &__image-wrapper
-          width 645px
-          height 430px
-          position absolute
+      &__image-wrapper {
+        width: 645px;
+        height: 430px;
+        position: absolute;
+      }
 
-        &__image
-          width 100%
-          height 430px
+      &__image {
+        width: 100%;
+        height: 430px;
+      }
 
-        &__title
-          color #FFFFFF
-          font-size 24px
-          line-height 28px
-          position relative
-          text-transform uppercase
-          max-width 350px
-          top 311px
-          left 30px
+      &__title {
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 28px;
+        position: relative;
+        text-transform: uppercase;
+        max-width: 350px;
+        top: 311px;
+        left: 30px;
+      }
 
-        &__theme
-          color #FFFFFF
-          position relative
-          top 210px
-          left 30px
-          font-size 13px
-          line-height 18px
+      &__theme {
+        color: #FFFFFF;
+        position: relative;
+        top: 210px;
+        left: 30px;
+        font-size: 13px;
+        line-height: 18px;
+      }
 
-        &__event-date
-          color #FFFFFF
-          position relative
-          top 369px
-          left 30px
-          font-size 13px
-          line-height 18px
+      &__event-date {
+        color: #FFFFFF;
+        position: relative;
+        top: 369px;
+        left: 30px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+  }
 
 </style>

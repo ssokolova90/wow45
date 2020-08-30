@@ -37,16 +37,18 @@
   };
 </script>
 
-<style lang="stylus">
-  .photo-details
-    margin 15px
-    padding 15px
-    background white
-    min-height 360px
+<style lang="scss">
+  .photo-details {
 
-    &__image
-      float left
-      margin-right 15px
-      margin-bottom 15px
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    min-height: 360px;
 
+    &__image {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
 </style>

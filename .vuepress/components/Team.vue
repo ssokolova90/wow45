@@ -101,4 +101,11 @@
         line-height 18px
         padding 0 30px
 
+  @media (max-width: $MQMobile)
+
+    .post
+      display flex
+      background white
+      width 100vw
+      height 100vh
 </style>

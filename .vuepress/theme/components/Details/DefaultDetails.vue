@@ -27,13 +27,14 @@
 
 </template>
 
-</template>
-
 <script>
   export default {
   };
 </script>
 
-<style lang="stylus">
-  .default-details
+<style lang="scss">
+
+  .default-details {
+  }
+
 </style>

@@ -124,18 +124,16 @@
       <div class="footer-nav__about">
         © Парад Памяти, посвящённый военному параду в г. Куйбышеве 7 ноября 1941 года.
       </div>
-      <NavLinks class="can-hide"/>
+      <NavLinks
+        class="can-hide"/>
     </div>
-    <SWUpdatePopup :updateEvent="swUpdateEvent"/>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import nprogress from 'nprogress'
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
-import SWUpdatePopup from './components/SWUpdatePopup.vue'
 import Home from './layouts/Home.vue'
 import Page from './layouts/Page.vue'
 import { resolveSidebarItems } from './helpers/util'
@@ -158,7 +156,6 @@ export default {
     Sidebar,
     Navbar,
     NavLinks,
-    SWUpdatePopup,
     ChronicleDetails,
     PeopleDetails,
     PhotoDetails,
@@ -170,7 +167,6 @@ export default {
   data () {
     return {
       isSidebarOpen: false,
-      swUpdateEvent: null
     }
   },
 
@@ -257,22 +253,15 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.onScroll)
 
-    // configure progress bar
-    nprogress.configure({ showSpinner: false })
-
     this.$router.beforeEach((to, from, next) => {
       if (to.path !== from.path && !Vue.component(to.name)) {
-        nprogress.start()
       }
       next()
     })
 
     this.$router.afterEach(() => {
-      nprogress.done()
       this.isSidebarOpen = false
     })
-
-    this.$on('sw-updated', this.onSWUpdated)
   },
 
   methods: {
@@ -299,13 +288,9 @@ export default {
         }
       }
     },
-
-    onSWUpdated (e) {
-      this.swUpdateEvent = e
-    }
   }
 }
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="./styles/theme.styl" lang="stylus"></style>
+<style src="./styles/theme.scss" lang="scss">
+</style>

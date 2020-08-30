@@ -41,13 +41,6 @@
     },
 
     computed: {
-      algolia () {
-        return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-      },
-
-      isAlgoliaSearch () {
-        return this.algolia && this.algolia.apiKey && this.algolia.indexName
-      }
     }
   }
 
@@ -59,40 +52,58 @@
   }
 </script>
 
-<style lang="stylus">
-  @import '../styles/config.styl'
+<style lang="scss">
+  @import '../styles/config';
 
-  $navbar-vertical-padding = 0.7rem
-  $navbar-horizontal-padding = 1.5rem
+  $navbar-vertical-padding: 0.7px;
+  $navbar-horizontal-padding: 1.5px;
 
-  .nav-footer
-    padding $navbar-vertical-padding $navbar-horizontal-padding
-    line-height $navbarHeight - 1.4rem
-    position relative
-    a, span, img
-      display inline-block
-    .logo
-      vertical-align center
-    .site-name
-      font-size 1.3rem
-      font-weight 600
-      color $textColor
-      position relative
-    .links
-      box-sizing border-box
-      background-color white
-      white-space nowrap
-      position absolute
-      right $navbar-horizontal-padding
-      display flex
-      .nav-links
-        flex 1
+  .nav-footer {
+    padding: $navbar-vertical-padding $navbar-horizontal-padding;
+    line-height: $navbarHeight;
+    position: relative;
 
-  @media (max-width: $MQMobile)
-    .nav-bar
-      padding-left 4rem
-      .can-hide
-        display none
-      .links
-        padding-left 1.5rem
+    a, span, img {
+      display: inline-block;
+    }
+
+    .logo {
+      vertical-align: center;
+    }
+
+    .site-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $textColor;
+      position: relative;
+    }
+
+    .links {
+      box-sizing: border-box;
+      background-color: white;
+      white-space: nowrap;
+      position: absolute;
+      right: $navbar-horizontal-padding;
+      display: flex;
+
+      .nav-links {
+        flex: 1;
+      }
+    }
+  }
+
+  @media (max-width: $MQMobile) {
+    .nav-bar {
+      padding-left: 4rem;
+
+      .can-hide {
+        display: none;
+      }
+
+      .links {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
 </style>

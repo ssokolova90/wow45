@@ -12,12 +12,14 @@
         :src="$withBase($site.themeConfig.logo)"
         :alt="$siteTitle"
       >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
+
+      <img
+        class="mobile-logo"
+        v-if="$site.themeConfig.logo"
+        :src="$withBase($site.themeConfig.mobileLogo)"
+        :alt="$siteTitle"
+      >
+
     </router-link>
 
     <div
@@ -33,11 +35,10 @@
 
 <script>
 import SidebarButton from './SidebarButton.vue'
-import SearchBox from './SearchBox.vue'
 import NavLinks from './NavLinks.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox},
+  components: { SidebarButton, NavLinks },
 
   props: ['isMain'],
 
@@ -63,13 +64,6 @@ export default {
   },
 
   computed: {
-    algolia () {
-      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-    },
-
-    isAlgoliaSearch () {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    }
   }
 }
 
@@ -81,40 +75,91 @@ function css (el, property) {
 }
 </script>
 
-<style lang="stylus">
-@import '../styles/config.styl'
+<style lang="scss">
+@import '../styles/config';
 
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
+$navbar-vertical-padding: 0.7em;
+$navbar-horizontal-padding: 1.5em;
 
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  position relative
-  a, span, img
-    display inline-block
-  .logo
-    vertical-align center
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    position absolute
-    right $navbar-horizontal-padding
-    display flex
-    .nav-links
-      flex 1
+.navbar {
+  padding: $navbar-vertical-padding $navbar-horizontal-padding;
+  line-height: $navbarHeight;
+  position: relative;
 
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
-    .links
-      padding-left 1.5rem
+  a, span, img {
+    display: inline-block;
+  }
+
+  .logo {
+    vertical-align: center;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  .site-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $textColor;
+    position: relative;
+  }
+
+  .links {
+    box-sizing: border-box;
+    background-color: white;
+    white-space: nowrap;
+    position: absolute;
+    right: $navbar-horizontal-padding;
+    display: flex;
+    .nav-links {
+      flex: 1;
+    }
+  }
+}
+@media (max-width: $MQMobile) {
+  .navbar {
+    background: white !important;
+    background-image: none !important;
+    height: 62px;
+    width: 100% !important;
+    padding: 0;
+
+    .mobile-logo {
+      display: block;
+      position: fixed;
+      height: 62px;
+      width: 62px;
+      top: 33px;
+      left: 33px;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .sidebar-button {
+      display: block;
+      position: fixed;
+      width: 62px;
+      height: 62px;
+      color: #D7B37F;
+      left: calc(100% - 115px);
+      top: 25px;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .can-hide {
+      display: none;
+    }
+
+    .links {
+      padding-left: 1.5rem;
+    }
+  }
+}
 </style>

@@ -79,118 +79,134 @@
   };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
-  .news-feed-page
-    &__title
-      font-size 30px
-      color #000
-      padding 40px 30px
-      text-transform uppercase
+  .news-feed-page {
+    &__title {
+      font-size: 30px;
+      color: #000;
+      padding: 40px 30px;
+      text-transform: uppercase;
+    }
 
-    .news-feed-posts
-      display flex
-      flex-direction row
-      flex-wrap wrap
-      padding-left 15px
+    .news-feed-posts {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 15px;
+    }
 
-    .wrapper
-      display flex
-      /*flex 1 1 auto*/
-      padding 4.5px
-      width 307px
-      height 430px
-      border 10px solid transparent
+    .wrapper {
+      display: flex;
+      padding: 4.5px;
+      width: 307px;
+      height: 430px;
+      border: 10px solid transparent;
 
-      .news-feed
-        display flex
-        background white
-        width 307px
-        height 430px
-        overflow hidden
+      .news-feed {
+        display: flex;
+        background: white;
+        width: 307px;
+        height: 430px;
+        overflow: hidden;
 
-        &__image-wrapper
-          width 308px
-          height 198px
+        &__image-wrapper {
+          width: 308px;
+          height: 198px;
+        }
 
-        &__image
-          width 100%
+        &__image {
+          width: 100%;
+        }
 
-        &__title
-          color #3C3C3B
-          font-size 24px
-          line-height 28px
-          top 40px
-          left 30px
-          position relative
+        &__title {
+          color: #3C3C3B;
+          font-size: 24px;
+          line-height: 28px;
+          top: 40px;
+          left: 30px;
+          position: relative;
+        }
 
-        &__news-feed
-          color #575756
-          position relative
-          top 15px
-          left 30px
-          font-size 13px
-          line-height 18px
-          font-style normal
-          font-weight normal
+        &__news-feed {
+          color: #575756;
+          position: relative;
+          top: 15px;
+          left: 30px;
+          font-size: 13px;
+          line-height: 18px;
+          font-style: normal;
+          font-weight: normal;
+        }
 
-        &__event-date
-          color #575756
-          position relative
-          top 145px
-          left 30px
-          font-size 13px
-          line-height 18px
-          font-style normal
-          font-weight normal
+        &__event-date {
+          color: #575756;
+          position: relative;
+          top: 145px;
+          left: 30px;
+          font-size: 13px;
+          line-height: 18px;
+          font-style: normal;
+          font-weight: normal;
+        }
+      }
+    }
+  }
 
-  .double-wrapper
-    display flex
-    flex 1 1 auto
-    width 645px
-    height 430px
-    border 10px solid transparent
+  .double-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    width: 645px;
+    height: 430px;
+    border: 10px solid transparent;
 
-    .news-feed
-      display flex
-      background white
-      width 645px
-      height 430px
-      overflow hidden
+    .news-feed {
+      display: flex;
+      background: white;
+      width: 645px;
+      height: 430px;
+      overflow: hidden;
 
-      &__image-wrapper
-        width 645px
-        height 430px
-        position absolute
+      &__image-wrapper {
+        width: 645px;
+        height: 430px;
+        position: absolute;
+      }
 
-      &__image
-        width 100%
-        height 430px
+      &__image {
+        width: 100%;
+        height: 430px;
+      }
 
-      &__title
-        color #FFFFFF
-        font-size 24px
-        line-height 28px
-        position relative
-        text-transform uppercase
-        max-width 350px
-        top 311px
-        left 30px
+      &__title {
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 28px;
+        position: relative;
+        text-transform: uppercase;
+        max-width: 350px;
+        top: 311px;
+        left: 30px;
+      }
 
-      &__news-feed
-        color #FFFFFF
-        position relative
-        top 210px
-        left 30px
-        font-size 13px
-        line-height 18px
+      &__news-feed {
+        color: #FFFFFF;
+        position: relative;
+        top: 210px;
+        left: 30px;
+        font-size: 13px;
+        line-height: 18px;
+      }
 
-      &__event-date
-        color #FFFFFF
-        position relative
-        top 369px
-        left 30px
-        font-size 13px
-        line-height 18px
+      &__event-date {
+        color: #FFFFFF;
+        position: relative;
+        top: 369px;
+        left: 30px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+  }
 
 </style>

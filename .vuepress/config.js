@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: '',
+  title: 'Парад Памяти',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -29,6 +29,7 @@ module.exports = {
   themeConfig: {
     repo: '',
     logo: '/images/assets/logo.png',
+    mobileLogo: '/images/assets/mobile_logo.png',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -54,10 +55,10 @@ module.exports = {
         text: 'Фотогаллерея',
         link: '/photo/',
       },
-      {
-        text: 'Видео',
-        link: '/video/',
-      },
+      // {
+      //   text: 'Видео',
+      //   link: '/video/',
+      // },
       {
         text: 'Контакты',
         link: '/about/',

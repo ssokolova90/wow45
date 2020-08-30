@@ -87,43 +87,51 @@
   };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
-  .chronicle-details-page
-    display flex
+  .chronicle-details-page {
+    display: flex;
+  }
 
-  .chronicle-peoples
-    padding 15px
+  .chronicle-peoples {
+    padding: 15px;
 
-    .wrapper
-      height 355px
+    .wrapper {
+      height: 355px;
+    }
+  }
 
-  .chronicle-details
-    padding 15px
-    background #fff
+  .chronicle-details {
 
-    &__image-wrapper
-      position relative
+    padding: 15px;
+    background: #fff;
 
-  .veteran-post
-    display: flex
+    &__image-wrapper {
+      position: relative;
+    }
+  }
 
-    &__person
-      color #000
-      font-size 24px
-      line-height 28px
-      padding 40px 30px
-      position relative
-      top -160px
-      color white
+  .veteran-post {
+    display: flex;
 
-    &__position
-      color #D5AE75
-      font-size 13px
-      line-height 18px
-      padding 0 30px
-      position relative
-      top -169px
+    &__person {
+      color: #000;
+      font-size: 24px;
+      line-height: 28px;
+      padding: 40px 30px;
+      position: relative;
+      top: -160px;
+      color: white;
+    }
 
+    &__position {
+      color: #D5AE75;
+      font-size: 13px;
+      line-height: 18px;
+      padding: 0 30px;
+      position: relative;
+      top: -169px;
+    }
+  }
 
 </style>

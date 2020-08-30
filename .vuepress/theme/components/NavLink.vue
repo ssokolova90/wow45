@@ -18,7 +18,8 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '../helpers/util'
+import { isExternal, isMailto, isTel, ensureExt }
+  from '../helpers/util';
 
 export default {
   props: {

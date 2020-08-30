@@ -37,16 +37,19 @@
   };
 </script>
 
-<style lang="stylus">
-  .people-details
-    margin 15px
-    padding 15px
-    background white
-    min-height 345px
+<style lang="scss">
 
-    &__image
-      float left
-      margin-right 15px
-      margin-bottom 15px
+  .people-details {
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    min-height: 345px;
+
+    &__image {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
 
 </style>

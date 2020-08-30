@@ -46,81 +46,92 @@
   };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
-  .photo-page
-    &__title
-      font-size 30px
-      color #000
-      padding 40px 30px
-      text-transform uppercase
+  .photo-page {
+    &__title {
+      font-size: 30px;
+      color: #000;
+      padding: 40px 30px;
+      text-transform: uppercase;
+    }
 
-    .photo-posts
-      display flex
-      flex-direction row
-      flex-wrap wrap
-      padding-left 15px
+    .photo-posts {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 15px;
+    }
 
-    .wrapper
-      display flex
-      flex 1 1 auto
-      width 307px
-      height 430px
-      border 10px solid transparent
+    .wrapper {
+      display: flex;
+      flex: 1 1 auto;
+      width: 307px;
+      height: 430px;
+      border: 10px solid transparent;
 
-      .photo
-        display flex
-        background white
-        width 307px
-        height 430px
-        overflow hidden
+      .photo {
+        display: flex;
+        background: white;
+        width: 307px;
+        height: 430px;
+        overflow: hidden;
 
-        &__image-wrapper
-          width 308px
-          height 198px
+        &__image-wrapper {
+          width: 308px;
+          height: 198px;
+        }
 
-        &__image
-          width 100%
+        &__image {
+          width: 100%;
+        }
 
-        &__title
-          color #000
-          font-size 24px
-          line-height 28px
-          padding 40px 30px
+        &__title {
+          color: #000;
+          font-size: 24px;
+          line-height: 28px;
+          padding: 40px 30px;
+        }
+      }
+    }
 
+    .double-wrapper {
+      display: flex;
+      flex: 1 1 auto;
+      width: 645px;
+      height: 430px;
+      border: 10px solid transparent;
 
-    .double-wrapper
-      display flex
-      flex 1 1 auto
-      width 645px
-      height 430px
-      border 10px solid transparent
+      .photo {
+        display: flex;
+        background: white;
+        width: 645px;
+        height: 430px;
+        overflow: hidden;
 
-      .photo
-        display flex
-        background white
-        width 645px
-        height 430px
-        overflow hidden
+        &__image-wrapper {
+          width: 645px;
+          height: 430px;
+          position: absolute;
+        }
 
-        &__image-wrapper
-          width 645px
-          height 430px
-          position absolute
+        &__image {
+          width: 100%;
+          height: 100%;
+        }
 
-        &__image
-          width 100%
-          height 100%
-
-        &__title
-          color #fff
-          font-size 24px
-          line-height 28px
-          padding 40px 30px
-          position relative
-          text-transform uppercase
-          max-width 350px
-          top 278px
-          left 30px
-
+        &__title {
+          color: #fff;
+          font-size: 24px;
+          line-height: 28px;
+          padding: 40px 30px;
+          position: relative;
+          text-transform: uppercase;
+          max-width: 350px;
+          top: 278px;
+          left: 30px;
+        }
+      }
+    }
+  }
 </style>

@@ -194,53 +194,76 @@ function find (page, items, offset) {
 }
 </script>
 
-<style lang="stylus">
-@import '../styles/config.styl'
-@require '../styles/wrapper.styl'
+<style lang="scss">
 
-.page
-  padding-bottom 2rem
+@import '../styles/config';
+@import '../styles/wrapper';
 
-.page-edit
-  @extend $wrapper
-  padding-top 1rem
-  padding-bottom 1rem
-  overflow auto
-  .edit-link
-    display inline-block
-    a
-      color lighten($textColor, 25%)
-      margin-right 0.25rem
-  .last-updated
-    float right
-    font-size 0.9em
-    .prefix
-      font-weight 500
-      color lighten($textColor, 25%)
-    .time
-      font-weight 400
-      color #aaa
+.page {
+  padding-bottom: 2rem;
+}
 
-.page-nav
-  @extend $wrapper
-  padding-top 1rem
-  padding-bottom 0
-  .inner
-    min-height 2rem
-    margin-top 0
-    border-top 1px solid $borderColor
-    padding-top 1rem
-    overflow auto // clear float
-  .next
-    float right
+.page-edit {
+  @extend .wrapper;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: auto;
 
-@media (max-width: $MQMobile)
-  .page-edit
-    .edit-link
-      margin-bottom .5rem
-    .last-updated
-      font-size .8em
-      float none
-      text-align left
+  .edit-link {
+    display: inline-block;
+
+    a {
+      color: lighten($textColor, 25%);
+      margin-right: 0.25rem;
+    }
+  }
+
+  .last-updated {
+    float: right;
+    font-size: 0.9em;
+
+    .prefix {
+      font-weight: 500;
+      color: lighten($textColor, 25%);
+    }
+
+    .time {
+      font-weight: 400;
+      color: #aaa;
+    }
+  }
+}
+
+.page-nav {
+  @extend .wrapper;
+  padding-top: 1rem;
+  padding-bottom: 0;
+
+  .inner {
+    min-height: 2rem;
+    margin-top: 0;
+    border-top: 1px solid $borderColor;
+    padding-top: 1rem;
+    overflow: auto;
+  }
+
+  .next {
+    float: right;
+  }
+}
+@media (max-width: $MQMobile) {
+  .page-edit {
+
+    .edit-link {
+      margin-bottom: .5rem;
+    }
+
+    .last-updated {
+      font-size: .8em;
+      float: none;
+      text-align: left;
+    }
+  }
+}
 
 </style>
