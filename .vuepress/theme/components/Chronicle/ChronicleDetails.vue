@@ -1,63 +1,29 @@
 <template>
-  <div class="page chronicle-details-page">
+  <div class="chronicle-details">
 
-    <div
-      v-if="$page.frontmatter"
-      class="">
+    <chronicle-detail-panel
+      item="$site.page">
 
-      <div class="chronicle-details">
-
-        <div class="chronicle-details__image-wrapper">
-          <img
-            class="chronicle-details__image"
-            v-if="$page.frontmatter.picture"
-            :src="$withBase($page.frontmatter.picture)"
-            alt="">
-        </div>
-        <div class="chronicle-details__person">
-          {{ $page.frontmatter.first_name }}
-          {{ $page.frontmatter.last_name }}
-        </div>
-
-        <div class="chronicle-details__position">
-          {{$page.frontmatter.position}}
-        </div>
+      <Content :custom="false"/>
+    </chronicle-detail-panel>
 
 
-        <Content :custom="false"/>
+    <div class="chronicle-details__chronicles">
 
-      </div>
-
-      <Chronicle path="/chronicle"></Chronicle>
+      <chronicle-panel
+        v-for="post in $veg.filterPages($site.pages, '/chronicle')"
+        :item="post">
+      </chronicle-panel>
 
     </div>
 
-    <div class="chronicle-peoples">
 
-      <div class="wrapper"
-           v-for="peoplePost in peoplePosts">
-        <div
-          v-if="peoplePost.frontmatter"
-          class="veteran-post">
-          <router-link :to="peoplePost.path">
-            <div class="veteran-post__image-wrapper">
-              <img
-                class="veteran-post__image"
-                v-if="peoplePost.frontmatter.picture"
-                :src="$withBase(peoplePost.frontmatter.picture)"
-                alt="">
-            </div>
-            <div class="veteran-post__person">
-              {{ peoplePost.frontmatter.first_name }}
-              {{ peoplePost.frontmatter.last_name }}
-            </div>
+    <div class="chronicle-details__peoples">
 
-            <div class="veteran-post__position">
-              {{peoplePost.frontmatter.position}}
-            </div>
-          </router-link>
-        </div>
-      </div>
+      <people-panel
+        v-for="people in $veg.filterPages($site.pages, '/people')"
+        :item="people">
+      </people-panel>
     </div>
 
   </div>
@@ -65,62 +31,40 @@
 </template>
 
 <script>
-  import Chronicle from "../../../components/Chronicle";
+  // import Chronicle
+  //   from '../../../components/Chronicle';
+
+  import ChronicleDetailPanel
+    from './ChronicleDetailPanel';
+
+  import PeoplePanel
+    from '../../../theme/components/People/PeoplePanel';
+
   export default {
-    components: {Chronicle},
-    computed: {
-      peoplePosts() {
+    components: {
+      ChronicleDetailPanel,
+      // Chronicle,
+      PeoplePanel
+    },
 
-        return this.$veg.filterPages(this.$site.pages, '/people');
-
-      }
-    }
   };
 </script>
 
 <style lang="scss">
 
-  .chronicle-details-page {
-    display: flex;
-  }
-
-  .chronicle-peoples {
-    padding: 15px;
-
-    .wrapper {
-      height: 355px;
-    }
-  }
+  @import '../../styles/config';
 
   .chronicle-details {
-
-    padding: 15px;
-    background: #fff;
-
-    &__image-wrapper {
-      position: relative;
-    }
-  }
-
-  .veteran-post {
     display: flex;
 
-    &__person {
-      color: #000;
-      font-size: 24px;
-      line-height: 28px;
-      padding: 40px 30px;
-      position: relative;
-      top: -160px;
+    &__chronicles {
+
+      padding: 15px;
+      background: #fff;
     }
 
-    &__position {
-      color: #D5AE75;
-      font-size: 13px;
-      line-height: 18px;
-      padding: 0 30px;
-      position: relative;
-      top: -169px;
+    &__peoples {
+      padding: 15px;
     }
   }
 

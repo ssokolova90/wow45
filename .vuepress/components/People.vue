@@ -1,14 +1,16 @@
 <template>
   <div class="people">
+
     <div class="people__title">
       Участники
     </div>
 
     <div class="people__posts">
-      <PeoplePanel
+
+      <people-panel
         v-for="people in $veg.filterPages($site.pages, path)"
         :item="people">
-      </PeoplePanel>
+      </people-panel>
     </div>
   </div>
 </template>
@@ -16,7 +18,7 @@
 <script>
   export default {
 
-    props: ["path"]
+    props: ['path']
   };
 </script>
 
@@ -37,13 +39,5 @@
       flex-wrap: wrap;
       padding-left: 15px;
     }
-
-    /*.wrapper {*/
-    /*  display: flex;*/
-    /*  flex: 1 1 auto;*/
-    /*  width: 308px;*/
-    /*  height: 346px;*/
-    /*  border: 10px solid transparent;*/
-    /*}*/
   }
 </style>

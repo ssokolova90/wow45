@@ -26,8 +26,10 @@
 
     </div>
 
-    <People :path='"/people"'>
-    </People>
+    <people-panel
+      v-for="people in $veg.filterPages($site.pages, '/people')"
+      :item="people">
+    </people-panel>
 
   </div>
 

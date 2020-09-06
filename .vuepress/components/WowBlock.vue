@@ -1,6 +1,8 @@
 <template>
   <div class="wow-block">
 
+    <div class="wow-block__chronicle">
+
       <main-chronicle-panel
         v-for="lastTheme in $veg.filterPages($site.pages, '/themes').slice(0, 1)"
         :item="lastTheme">
@@ -11,15 +13,16 @@
         :item="people">
       </chronicle-panel>
 
+    </div>
   </div>
 </template>
 
 <script>
   import MainChroniclePanel
-    from "../theme/components/Chronicle/MainChroniclePanel";
+    from '../theme/components/Chronicle/MainChroniclePanel';
 
   import ChroniclePanel
-    from "../theme/components/Chronicle/ChroniclePanel";
+    from '../theme/components/Chronicle/ChroniclePanel';
 
   export default {
     name: 'WowBlock',
@@ -31,40 +34,13 @@
 </script>
 
 
-
 <style lang="scss">
 
   .wow-block {
+
+    &__chronicle {
+
+    }
   }
 
-  /*  padding-top: 15px;*/
-
-  /*  a {*/
-  /*    font-weight: 500;*/
-  /*    color: #000000;*/
-  /*  }*/
-
-  /*  &__title {*/
-  /*    font-size: 30px;*/
-  /*    color: #000;*/
-  /*    padding: 40px 30px;*/
-  /*    text-transform: uppercase;*/
-  /*  }*/
-
-  /*  .wow-block-posts {*/
-  /*    display: flex;*/
-  /*    flex-direction: row;*/
-  /*    flex-wrap: wrap;*/
-  /*    padding-left: 15px;*/
-  /*  }*/
-
-  /*  .wrapper {*/
-  /*    display: flex;*/
-  /*    flex: 1 1 auto;*/
-  /*    width: 308px;*/
-  /*    border: 10px solid transparent;*/
-  /*    padding-top: 7px;*/
-  /*  }*/
-
-  /*}*/
 </style>

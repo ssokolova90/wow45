@@ -25,8 +25,8 @@
 
     </div>
 
-    <Theme :path='"/themes"'>
-    </Theme>
+<!--    <Theme :path='"/themes"'>-->
+<!--    </Theme>-->
 
   </div>
 

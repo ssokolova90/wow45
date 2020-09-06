@@ -24,8 +24,8 @@
 
     </div>
 
-    <Team :path='"/team"'>
-    </Team>
+<!--    <team :path='"/team"'>-->
+<!--    </team>-->
 
   </div>
 

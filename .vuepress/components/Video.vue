@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    props: ["path"],
+    props: ['path'],
   };
 </script>
 
