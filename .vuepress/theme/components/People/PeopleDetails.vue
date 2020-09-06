@@ -1,23 +1,24 @@
 <template>
 
-  <div class="page">
-
-    <div class="people-details">
+  <div>
+    <div
+      class="people-details"
+      v-if="item && item.frontmatter">
 
       <div class="people-details__image-wrapper">
         <img
           class="people-details__image"
-          v-if="$page.frontmatter.picture"
-          :src="$withBase($page.frontmatter.picture)"
+          v-if="item.frontmatter.picture"
+          :src="$withBase(item.frontmatter.picture)"
           alt="">
       </div>
       <div class="people-details__person">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
+        {{ item.frontmatter.first_name }}
+        {{ item.frontmatter.last_name }}
       </div>
 
       <div class="people-details__position">
-        {{$page.frontmatter.position}}
+        {{ item.frontmatter.position }}
       </div>
 
 
@@ -34,6 +35,7 @@
 
 <script>
   export default {
+    props: ['item']
   };
 </script>
 

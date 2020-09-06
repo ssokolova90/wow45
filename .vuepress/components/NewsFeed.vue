@@ -9,32 +9,7 @@
 
       <div v-for="(post, index) in posts"
            :class="index < 2 ? 'double-wrapper' : 'wrapper'">
-        <div class="news-feed">
-          <router-link :to="post.path">
-            <div class="news-feed__image-wrapper">
-              <img
-                class="news-feed__image"
-                v-if="post.frontmatter.picture"
-                :src="$withBase(post.frontmatter.picture)"
-                alt="">
-            </div>
-            <div
-              v-if="index > 1"
-              class="news-feed__news-feed">
 
-              Темы парада памяти
-            </div>
-
-
-            <div class="news-feed__title">
-              {{ post.frontmatter.title }}
-            </div>
-
-            <div class="news-feed__event-date">
-              {{ formateDate(post.frontmatter.event_date) }}
-            </div>
-          </router-link>
-        </div>
       </div>
     </div>
   </div>
@@ -44,7 +19,7 @@
 
 
 <script>
-  import moment from "moment";
+  import moment from "moment/moment";
   import 'moment/locale/ru';
 
   export default {
@@ -65,11 +40,6 @@
 
         }).reverse();
         return posts;
-      }
-    },
-    methods: {
-      formateDate(date, format = 'D MMMM YYYY') {
-        return moment(date).format(format)
       }
     },
     created() {

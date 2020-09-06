@@ -31,7 +31,7 @@
             </div>
 
             <div class="theme__event-date">
-              {{ formateDate(post.frontmatter.event_date) }}
+              {{ $veg.formatDate(post.frontmatter.event_date) }}
             </div>
           </router-link>
         </div>
@@ -39,102 +39,89 @@
     </div>
   </div>
 
-
 </template>
 
 
 <script>
-  import moment from "moment";
-  import 'moment/locale/ru';
 
   export default {
     props: ["path"],
-    computed: {
-      posts() {
-        console.log("this.$site", this.$site);
-
-        let posts = this.$site.pages.filter(x => {
-          return x.path.match(new RegExp(`(${this.path})(?=.*html)`));
-        }).reverse();
-        return posts;
-      }
-    },
-    methods: {
-      formateDate(date, format = 'D MMMM YYYY') {
-        return moment(date).format(format)
-      }
-    },
-    created() {
-
-      moment.locale('ru');
-    }
   };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
-  .theme-page
-    &__title
-      font-size 30px
-      color #000
-      padding 40px 30px
-      text-transform uppercase
+  .theme-page {
+    &__title {
+      font-size: 30px;
+      color: #000;
+      padding: 40px 30px;
+      text-transform: uppercase;
+    }
 
-    .theme-posts
-      display flex
-      flex-direction row
-      flex-wrap wrap
-      padding-left 15px
+    .theme-posts {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 15px;
+    }
 
-    .wrapper
-      display flex
-      /*flex 1 1 auto*/
-      padding 4.5px
-      width 307px
-      height 430px
-      border 10px solid transparent
+    .wrapper {
+      display: flex;
+      padding: 4.5px;
+      width: 307px;
+      height: 430px;
+      border: 10px solid transparent;
 
-      .theme
-        display flex
-        background white
-        width 307px
-        height 430px
-        overflow hidden
+      .theme {
+        display: flex;
+        background: white;
+        width: 307px;
+        height: 430px;
+        overflow: hidden;
 
-        &__image-wrapper
-          width 308px
-          height 198px
+        &__image-wrapper {
+          width: 308px;
+          height: 198px;
 
-        &__image
-          width 100%
+          &__image {
+            width: 100%;
+          }
 
-        &__title
-          color #3C3C3B
-          font-size 24px
-          line-height 28px
-          top 40px
-          left 30px
-          position relative
+          &__title {
+            color: #3C3C3B;
+            font-size: 24px;
+            line-height: 28px;
+            top: 40px;
+            left: 30px;
+            position: relative;
+          }
 
-        &__theme
-          color #575756
-          position relative
-          top 15px
-          left 30px
-          font-size 13px
-          line-height 18px
-          font-style normal
-          font-weight normal
+          &__theme {
+            color: #575756;
+            position: relative;
+            top: 15px;
+            left: 30px;
+            font-size: 13px;
+            line-height: 18px;
+            font-style: normal;
+            font-weight: normal;
+          }
 
-        &__event-date
-          color #575756
-          position relative
-          top 145px
-          left 30px
-          font-size 13px
-          line-height 18px
-          font-style normal
-          font-weight normal
+          &__event-date {
+            color: #575756;
+            position: relative;
+            top: 145px;
+            left: 30px;
+            font-size: 13px;
+            line-height: 18px;
+            font-style: normal;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
 
   .double-wrapper {
     display: flex;

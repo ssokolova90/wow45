@@ -138,12 +138,12 @@ import Home from './layouts/Home.vue'
 import Page from './layouts/Page.vue'
 import { resolveSidebarItems } from './helpers/util'
 
-import ChronicleDetails from './components/Details/ChronicleDetails.vue';
-import PeopleDetails from './components/Details/PeopleDetails.vue';
-import PhotoDetails from './components/Details/PhotoDetails.vue';
-import TeamDetails from './components/Details/TeamDetails.vue';
-import ThemeDetails from './components/Details/ThemeDetails.vue';
-import VideoDetails from './components/Details/VideoDetails.vue';
+import ChronicleDetails from './components/Chronicle/ChronicleDetails.vue';
+import PeopleDetails from './components/People/PeopleDetails.vue';
+import PhotoDetails from './components/Photo/PhotoDetails.vue';
+import TeamDetails from './components/Team/TeamDetails.vue';
+import ThemeDetails from './components/Theme/ThemeDetails.vue';
+import VideoDetails from './components/Video/VideoDetails.vue';
 import NavFooter from "./components/NavFooter.vue";
 import NavLinks from './components/NavLinks.vue';
 

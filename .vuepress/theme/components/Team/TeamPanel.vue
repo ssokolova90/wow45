@@ -1,18 +1,13 @@
 <template>
-
-  <div class="video">
-  </div>
-
+  <div></div>
 </template>
 
 <script>
   export default {
-    props: ["path"],
-  };
+    props: ['item']
+  }
 </script>
 
 <style lang="scss">
 
-  .video {
-  }
 </style>

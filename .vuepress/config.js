@@ -1,4 +1,4 @@
-const { description } = require('../../package')
+const { description } = require('../../package');
 
 module.exports = {
   /**
@@ -75,4 +75,4 @@ module.exports = {
     // '@vuepress/plugin-back-to-top',
     // '@vuepress/plugin-medium-zoom',
   ],
-}
+};

@@ -68,20 +68,11 @@
   import Chronicle from "../../../components/Chronicle";
   export default {
     components: {Chronicle},
-    data() {
-      return {
-        peoplePostsPath: '/people'
-      }
-    },
     computed: {
       peoplePosts() {
 
-        console.log('PEOPLE POSTS PAGES ', this.$site.pages);
+        return this.$veg.filterPages(this.$site.pages, '/people');
 
-        let posts = this.$site.pages.filter(x => {
-          return x.path.match(new RegExp(`(${this.peoplePostsPath})(?=.*html)`));
-        });
-        return posts;
       }
     }
   };
@@ -121,7 +112,6 @@
       padding: 40px 30px;
       position: relative;
       top: -160px;
-      color: white;
     }
 
     &__position {
