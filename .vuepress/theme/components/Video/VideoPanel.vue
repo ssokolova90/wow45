@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="video-details">
+  </div>
+
 </template>
 
 <script>
@@ -10,4 +12,6 @@
 
 <style lang="scss">
 
+  .video-details {
+  }
 </style>

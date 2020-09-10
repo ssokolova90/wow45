@@ -14,7 +14,6 @@
         v-for="post in $veg.filterPages($site.pages, '/chronicle')"
         :item="post">
       </chronicle-panel>
-
     </div>
 
 
@@ -27,7 +26,6 @@
     </div>
 
   </div>
-
 </template>
 
 <script>
@@ -51,8 +49,6 @@
 </script>
 
 <style lang="scss">
-
-  @import '../../styles/config';
 
   .chronicle-details {
     display: flex;

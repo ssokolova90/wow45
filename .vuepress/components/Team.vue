@@ -11,7 +11,7 @@
       <team-panel
         v-for="(team, index) in $veg.filterPages($site.pages, path)"
         :key="index"
-        item="team">
+        :item="team">
       </team-panel>
 
     </div>

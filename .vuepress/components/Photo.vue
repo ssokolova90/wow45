@@ -9,7 +9,7 @@
 
       <photo-panel
         v-for="(photo, index) in $veg.filterPages($site.pages, path)"
-        item="photo"
+        :item="photo"
         :key="index"
         :doubleSize="index < 2">
 
@@ -29,6 +29,7 @@
     components: {
       PhotoPanel
     },
+    props: ['path']
   };
 
 </script>

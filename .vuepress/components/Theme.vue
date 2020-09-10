@@ -10,7 +10,8 @@
       <theme-panel
         v-for="(theme, index) in $veg.filterPages($site.pages, path)"
         :doubleSize="index < 2"
-        item="theme">
+        :key="index"
+        :item="theme">
 
       </theme-panel>
     </div>

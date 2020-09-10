@@ -8,7 +8,8 @@
     <div class="people__posts">
 
       <people-panel
-        v-for="people in $veg.filterPages($site.pages, path)"
+        v-for="(people, index) in $veg.filterPages($site.pages, path)"
+        :key="index"
         :item="people">
       </people-panel>
     </div>
@@ -16,9 +17,15 @@
 </template>
 
 <script>
-  export default {
 
-    props: ['path']
+  import PeoplePanel from '../theme/components/People/PeoplePanel';
+
+  export default {
+    name: 'People',
+    props: ['path'],
+    components: {
+      PeoplePanel
+    }
   };
 </script>
 

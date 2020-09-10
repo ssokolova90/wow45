@@ -34,8 +34,6 @@
 </script>
 
 <style lang="scss">
-
-  @import '../../styles/config';
   
   .team-panel {
     display: flex;
@@ -65,16 +63,6 @@
       font-size: 13px;
       line-height: 18px;
       padding: 0 30px;
-    }
-  }
-
-  @media (max-width: $MQMobile) {
-
-    .team-panel {
-      display: flex;
-      background: white;
-      width: 100vw;
-      height: 100vh;
     }
   }
 

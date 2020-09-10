@@ -17,7 +17,7 @@
       </div>
 
       <div class="team-details__position">
-        {{$page.frontmatter.position}}
+        {{ $page.frontmatter.position }}
       </div>
 
       <Content :custom="false"/>

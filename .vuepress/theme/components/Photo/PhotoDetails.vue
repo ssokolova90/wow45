@@ -28,8 +28,8 @@
   </div>
 
 
-<!--    <Photo :path='"/photo"'>-->
-<!--    </Photo>-->
+<!--  <photo :path='"/photo"'>-->
+<!--  </photo>-->
 
 </template>
 
@@ -39,17 +39,17 @@
 </script>
 
 <style lang="scss">
-  .photo-details {
+  /*.photo-details {*/
 
-    margin: 15px;
-    padding: 15px;
-    background: white;
-    min-height: 360px;
+  /*  margin: 15px;*/
+  /*  padding: 15px;*/
+  /*  background: white;*/
+  /*  min-height: 360px;*/
 
-    &__image {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-  }
+  /*  &__image {*/
+  /*    float: left;*/
+  /*    margin-right: 15px;*/
+  /*    margin-bottom: 15px;*/
+  /*  }*/
+  /*}*/
 </style>

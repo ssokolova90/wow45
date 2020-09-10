@@ -12,8 +12,8 @@
           :src="$withBase(item.frontmatter.picture)"
           alt="">
       </div>
+<!--      v-if="index > 1"-->
       <div
-        v-if="index > 1"
         :class="$veg.b(blockClassName, 'theme')">
         Темы парада памяти
       </div>

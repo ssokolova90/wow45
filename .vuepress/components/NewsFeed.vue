@@ -9,7 +9,7 @@
 
       <theme-panel
         v-for="(chronicle, index) in $veg.filterPages($site.pages, '/chronicle')"
-        item="chronicle"
+        :item="chronicle"
         :key="index"
         :doubleSize="index < 2">
 
