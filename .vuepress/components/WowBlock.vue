@@ -36,11 +36,6 @@
 
 <style lang="scss">
 
-  .wow-block {
-
-    &__chronicle {
-
-    }
-  }
+  /*@import './WowBlock.scss';*/
 
 </style>

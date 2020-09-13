@@ -13,6 +13,5 @@
 
 <style lang="scss">
 
-  .video {
-  }
+  /*@import './Video.scss';*/
 </style>

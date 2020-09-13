@@ -39,16 +39,5 @@
 
 <style lang="scss">
 
-  .theme-details {
-    margin: 15px;
-    padding: 15px;
-    background: white;
-    min-height: 345px;
-
-    &__image {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-  }
+  /*@import './ThemeDetails.scss';*/
 </style>

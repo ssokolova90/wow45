@@ -18,7 +18,8 @@
 
 <script>
 
-  import PeoplePanel from '../theme/components/People/PeoplePanel';
+  import PeoplePanel
+    from '../theme/components/People/PeoplePanel';
 
   export default {
     name: 'People',
@@ -31,20 +32,5 @@
 
 <style lang="scss">
 
-  .people {
-
-    &__title {
-      font-size: 30px;
-      color: #000;
-      padding: 40px 30px;
-      text-transform: uppercase;
-    }
-
-    &__posts {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-left: 15px;
-    }
-  }
+  /*@import './People.scss';*/
 </style>

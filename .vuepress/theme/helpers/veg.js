@@ -6,7 +6,9 @@ export default {
   filterPages(pages, path) {
 
     return (pages || []).filter(x => {
-      return x.path.match(new RegExp(`(${path})(?=.*html)`));
+      return x.path.match(
+        new RegExp(`(${path})(?=.*html)`)
+      );
     });
   },
 
@@ -57,12 +59,11 @@ export default {
 
     const detailPath = $page.regularPath.split('/');
 
-    if (!detailPath[2] || !detailPath[2].length) {
+    if (!detailPath[1] || !detailPath[1].length) {
       return null;
     }
 
     const openedPagePath = detailPath[1];
     return componentsMap[openedPagePath];
   },
-
 };

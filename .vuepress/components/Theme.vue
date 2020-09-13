@@ -1,11 +1,11 @@
 <template>
-  <div class="theme-page">
+  <div class="theme">
 
-    <div class="theme-page__title">
+    <div class="theme__title">
       Темы парада памяти
     </div>
 
-    <div class="theme-page__posts">
+    <div class="theme__posts">
 
       <theme-panel
         v-for="(theme, index) in $veg.filterPages($site.pages, path)"
@@ -36,21 +36,6 @@
 
 <style lang="scss">
 
-  .theme-page {
-
-    &__title {
-      font-size: 30px;
-      color: #000;
-      padding: 40px 30px;
-      text-transform: uppercase;
-    }
-
-    &__posts {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-left: 15px;
-    }
-  }
+  /*@import './Theme.scss';*/
 
 </style>

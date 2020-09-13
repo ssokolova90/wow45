@@ -34,7 +34,6 @@
 
 <style lang="scss">
 
-  .video-details {
-  }
+  /*@import './VideoDetails.scss';*/
 
 </style>

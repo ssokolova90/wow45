@@ -1,0 +1,30 @@
+.photo-panel--double {
+  display: flex;
+  background: white;
+  width: 645px;
+  height: 430px;
+  overflow: hidden;
+
+  &__image-wrapper {
+    width: 645px;
+    height: 430px;
+    position: absolute;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 40px 30px;
+    position: relative;
+    text-transform: uppercase;
+    max-width: 350px;
+    top: 278px;
+    left: 30px;
+  }
+}

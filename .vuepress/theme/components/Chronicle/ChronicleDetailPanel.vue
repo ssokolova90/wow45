@@ -34,32 +34,5 @@
 
 <style lang="scss">
 
-  .chronicle-detail-panel {
-
-    &__image-wrapper {
-      position: relative;
-    }
-
-    &__image {
-    }
-
-    &__person {
-      color: #000;
-      font-size: 24px;
-      line-height: 28px;
-      padding: 40px 30px;
-      position: relative;
-      top: -160px;
-    }
-
-    &__position {
-      color: #D5AE75;
-      font-size: 13px;
-      line-height: 18px;
-      padding: 0 30px;
-      position: relative;
-      top: -169px;
-    }
-  }
-
+  /*@import './ChronicleDetailPanel.scss';*/
 </style>

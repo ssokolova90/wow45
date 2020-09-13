@@ -1,20 +1,12 @@
 <template>
-  <header class="navbar">
+  <header
+    :class="blockClassName">
 
-    <router-link
-      :to="$localePath"
-      class="navbar__home">
-
-      <img
-        v-if="$site.themeConfig.logo"
-        class="navbar__logo"
-        src="$site.themeConfig.logo"
-        :alt="$siteTitle">
-
-    </router-link>
+    <sidebar-logo>
+    </sidebar-logo>
 
     <main-menu
-      :modifier="'navbar'"
+      :modifier="modifier"
       :items="mainMenuItems">
     </main-menu>
 
@@ -22,22 +14,55 @@
 </template>
 
 <script>
-  export default {
 
+  import SidebarLogo
+    from '../SidebarLogo/SidebarLogo';
+
+  import MainMenu
+    from '../MainMenu/MainMenu';
+
+  export default {
+    components: {
+      SidebarLogo,
+      MainMenu
+    },
     props: ['modifier'],
     computed: {
       mainMenuItems() {
         return this.$themeLocaleConfig.nav
           || this.$site.themeConfig.nav
           || [];
-      }
+      },
+
+      deviceModifier() {
+
+        const device = this.isMobile
+          ? 'mobile'
+          : 'desktop';
+
+        if (!this.modifier) {
+          return device;
+        }
+
+        return this.modifier + '-' + device;
+      },
+
+      blockClassName() {
+        return this.$veg.b(
+          'navbar',
+          null,
+          this.deviceModifier
+        );
+      },
     }
   }
 </script>
 
 <style lang="scss">
 
-  @import 'DefaultNavbar';
-  @import 'MainNavbar';
+  @import './NavbarDefaultDesktop';
+  @import './NavbarDefaultMobile';
+  @import './NavbarMainDesktop';
+  @import './NavbarMainMobile';
 
 </style>

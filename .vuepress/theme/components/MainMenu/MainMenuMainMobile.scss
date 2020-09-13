@@ -1,0 +1,20 @@
+.main-menu--main-mobile {
+
+  &__item {
+
+    margin: 24px;
+  }
+
+  &__item-link {
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3c3c3b;
+    text-decoration: none;
+  }
+
+  &__item-link:hover {
+    color: #d5ae75;
+  }
+}

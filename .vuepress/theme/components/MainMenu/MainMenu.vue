@@ -1,19 +1,20 @@
 <template>
-  <ul :class="$veg.b(blockClassName, 'image-wrapper')">
 
-    <li
+  <div
+    :class="$veg.b(blockClassName)">
+    <div
       v-for="(item, index) in items"
       :key="index"
-      :class="$veg.b(blockClassName, '__item')">
+      :class="$veg.b(blockClassName, 'item')">
 
       <router-link
-        :class="$veg.b(blockClassName, '__item-link')"
-        :to="item.path">
+        :class="$veg.b(blockClassName, 'item-link')"
+        :to="item.link">
 
-        {{ item.name }}
+        {{ item.text }}
       </router-link>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -22,7 +23,16 @@
     props: ['modifier', 'items'],
     computed: {
       blockClassName() {
-        return this.$veg.b('main-menu', this.modifier);
+
+        const deviceType = this.isMobile
+          ? 'mobile'
+          : 'desktop';
+
+        const modifier = this.modifier === 'main'
+          ? this.modifier + '-' + deviceType
+          : this.modifier;
+
+        return this.$veg.b('main-menu', null, modifier);
       }
     }
   }
@@ -30,7 +40,9 @@
 
 <style lang="scss">
 
-  @import './NavbarMainMenu';
-  @import './NavfooterMainMenu';
-  @import './SidebarMainMenu';
+  @import './MainMenu';
+  @import './MainMenuMainDesktop';
+  @import './MainMenuMainMobile';
+  @import './MainMenuFooter';
+  @import './MainMenuSidebar';
 </style>

@@ -10,8 +10,11 @@
 
 <script>
 
-  import LayoutDefault from './LayoutDefault';
-  import LayoutMain from './LayoutMain';
+  import LayoutDefault
+    from './components/LayoutDefault/LayoutDefault.vue';
+
+  import LayoutMain
+    from './components/LayoutMain/LayoutMain.vue';
 
   export default {
 
@@ -29,3 +32,8 @@
     }
   }
 </script>
+
+<style lang="scss">
+
+  @import "./scss/reset";
+</style>

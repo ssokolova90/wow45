@@ -1,5 +1,6 @@
 <template>
-  <div class="video-details">
+
+  <div class="video-panel">
   </div>
 
 </template>
@@ -12,6 +13,6 @@
 
 <style lang="scss">
 
-  .video-details {
-  }
+  /*@import './VideoPanel.scss';*/
+
 </style>

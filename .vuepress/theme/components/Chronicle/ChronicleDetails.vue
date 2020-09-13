@@ -50,18 +50,5 @@
 
 <style lang="scss">
 
-  .chronicle-details {
-    display: flex;
-
-    &__chronicles {
-
-      padding: 15px;
-      background: #fff;
-    }
-
-    &__peoples {
-      padding: 15px;
-    }
-  }
-
+  /*@import './ChronicleDetails.scss';*/
 </style>
