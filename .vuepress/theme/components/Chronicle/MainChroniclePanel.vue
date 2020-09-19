@@ -34,11 +34,13 @@
 
 <script>
   export default {
+    name: 'MainChroniclePanel',
     props: ['item']
   };
 </script>
 
 <style lang="scss">
 
-  /*@import './MainChroniclePanel.scss';*/
+  /*@import './MainChroniclePanelDesktop.scss';*/
+  /*@import './MainChroniclePanelMobile.scss';*/
 </style>

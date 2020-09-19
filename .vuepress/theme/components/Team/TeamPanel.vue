@@ -35,6 +35,7 @@
 
 <style lang="scss">
 
-  /*@import './TeamPanel.scss';*/
+  /*@import './TeamPanelDesktop.scss';*/
+  /*@import './TeamPanelMobile.scss';*/
 
 </style>

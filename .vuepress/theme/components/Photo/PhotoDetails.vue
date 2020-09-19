@@ -41,5 +41,6 @@
 
 <style lang="scss">
 
-  /*@import './PhotoDetails.scss';*/
+  /*@import './PhotoDetailsDesktop.scss';*/
+  /*@import './PhotoDetailsMobile.scss';*/
 </style>

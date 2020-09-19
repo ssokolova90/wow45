@@ -1,8 +1,8 @@
 <template>
 
-  <div class="page">
+  <div class="team-details">
 
-    <div class="team-details">
+    <div class="team-details__teams-list">
 
       <div class="team-details__image-wrapper">
         <img
@@ -38,6 +38,7 @@
 
 <style lang="scss">
 
-  /*@import './TeamDetails.scss';*/
+  /*@import './TeamDetailsDesktop.scss';*/
+  /*@import './TeamDetailsMobile.scss';*/
 
 </style>

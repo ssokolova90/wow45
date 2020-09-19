@@ -43,6 +43,7 @@
 
 <style lang="scss">
 
-/*@import './PeopleDetails.scss';*/
+/*@import './PeopleDetailsDesktop.scss';*/
+/*@import './PeopleDetailsMobile.scss';*/
 
 </style>

@@ -39,5 +39,6 @@
 
 <style lang="scss">
 
-  /*@import './ThemeDetails.scss';*/
+  /*@import './ThemeDetailsDesktop.scss';*/
+  /*@import './ThemeDetailsMobile.scss';*/
 </style>

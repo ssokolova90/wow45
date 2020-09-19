@@ -41,6 +41,8 @@
 
 <style lang="scss">
 
-  /*@import './PhotoPanel.scss';*/
-  /*@import './PhotoPanelDouble.scss';*/
+  /*@import './PhotoPanelDesktop.scss';*/
+  /*@import './PhotoPanelMobile.scss';*/
+  /*@import './PhotoPanelDoubleDesktop.scss';*/
+  /*@import './PhotoPanelDoubleMobile.scss';*/
 </style>

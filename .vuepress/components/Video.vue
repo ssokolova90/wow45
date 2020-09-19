@@ -7,11 +7,13 @@
 
 <script>
   export default {
+    name: 'Video',
     props: ['path'],
   };
 </script>
 
 <style lang="scss">
 
-  /*@import './Video.scss';*/
+  /*@import './VideoDesktop.scss';*/
+  /*@import './VideoMobile.scss';*/
 </style>

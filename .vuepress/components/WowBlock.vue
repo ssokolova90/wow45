@@ -36,6 +36,7 @@
 
 <style lang="scss">
 
-  /*@import './WowBlock.scss';*/
+  /*@import './WowBlockDesktop.scss';*/
+  /*@import './WowBlockMobile.scss';*/
 
 </style>

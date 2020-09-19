@@ -40,9 +40,12 @@
 
 <style lang="scss">
 
-  @import './MainMenu';
+  @import './MainMenuDesktop';
+  @import './MainMenuMobile';
   @import './MainMenuMainDesktop';
   @import './MainMenuMainMobile';
-  @import './MainMenuFooter';
-  @import './MainMenuSidebar';
+  @import './MainMenuFooterDesktop';
+  @import './MainMenuFooterMobile';
+  @import './MainMenuSidebarDesktop';
+  @import './MainMenuSidebarMobile';
 </style>

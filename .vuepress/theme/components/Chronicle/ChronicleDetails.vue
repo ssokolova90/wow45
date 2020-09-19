@@ -50,5 +50,6 @@
 
 <style lang="scss">
 
-  /*@import './ChronicleDetails.scss';*/
+  /*@import './ChronicleDetailsDesktop.scss';*/
+  /*@import './ChronicleDetailsMobile.scss';*/
 </style>

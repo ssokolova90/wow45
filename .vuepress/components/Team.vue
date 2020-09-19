@@ -25,6 +25,7 @@
     from '../theme/components/Team/TeamPanel';
 
   export default {
+    name: 'Team',
     components: {
       TeamPanel
     },

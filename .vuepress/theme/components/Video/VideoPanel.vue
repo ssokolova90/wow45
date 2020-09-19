@@ -13,6 +13,7 @@
 
 <style lang="scss">
 
-  /*@import './VideoPanel.scss';*/
+  /*@import './VideoPanelDesktop.scss';*/
+  /*@import './VideoPanelMobile.scss';*/
 
 </style>

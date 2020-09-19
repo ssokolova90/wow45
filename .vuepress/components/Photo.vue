@@ -26,6 +26,7 @@
     from '../theme/components/Photo/PhotoPanel';
 
   export default {
+    name: 'Photo',
     components: {
       PhotoPanel
     },
@@ -36,5 +37,6 @@
 
 <style lang="scss">
 
-  /*@import './Photo.scss';*/
+  /*@import './PhotoDesktop.scss';*/
+  /*@import './PhotoMobile.scss';*/
 </style>

@@ -26,6 +26,7 @@
     from '../theme/components/Theme/ThemePanel';
 
   export default {
+    name: 'Theme',
     props: ['path'],
     components: {
       ThemePanel

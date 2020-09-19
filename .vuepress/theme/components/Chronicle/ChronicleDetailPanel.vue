@@ -28,11 +28,13 @@
 
 <script>
   export default {
+    name: 'ChronicleDetailPanel',
     params: ['item']
   }
 </script>
 
 <style lang="scss">
 
-  /*@import './ChronicleDetailPanel.scss';*/
+  /*@import './ChronicleDetailPanelDesktop.scss';*/
+  /*@import './ChronicleDetailPanelMobile.scss';*/
 </style>

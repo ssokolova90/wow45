@@ -33,6 +33,7 @@
 
 <style lang="scss">
 
-  @import './Footer.scss';
+  @import './FooterDesktop.scss';
+  @import './FooterMobile.scss';
 </style>
 

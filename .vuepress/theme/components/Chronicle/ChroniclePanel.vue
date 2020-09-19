@@ -32,11 +32,13 @@
 
 <script>
   export default {
+    name: 'ChroniclePanel',
     props: ['item']
   };
 </script>
 
 <style lang="scss">
 
-  /*@import './ChroniclePanel.scss';*/
+  /*@import './ChroniclePanelDesktop.scss';*/
+  /*@import './ChroniclePanelMobile.scss';*/
 </style>

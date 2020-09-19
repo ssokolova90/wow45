@@ -27,6 +27,7 @@
     from '../theme/components/Theme/ThemePanel';
 
   export default {
+    name: 'NewsFeed',
     components: {
       ThemePanel
     },
@@ -35,5 +36,6 @@
 
 <style lang="scss">
 
-  /*@import './NewsFeed.scss';*/
+  /*@import './NewsFeedDesktop.scss';*/
+  /*@import './NewsFeedMobile.scss';*/
 </style>

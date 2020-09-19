@@ -66,4 +66,13 @@ export default {
     const openedPagePath = detailPath[1];
     return componentsMap[openedPagePath];
   },
+
+  camelToKebab(text) {
+
+    const result = key.replace( /([A-Z])/g, " $1" );
+    return result
+      .split(' ')
+      .join('-')
+      .toLowerCase();
+  }
 };

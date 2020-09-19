@@ -50,7 +50,9 @@
 <style lang="scss">
 
 
-  /*@import './ThemePanel.scss';*/
-  /*@import './ThemePanelDouble.scss';*/
+  /*@import './ThemePanelDesktop.scss';*/
+  /*@import './ThemePanelMobile.scss';*/
+  /*@import './ThemePanelDoubleDesktop.scss';*/
+  /*@import './ThemePanelDoubleMobile.scss';*/
 
 </style>

@@ -26,12 +26,14 @@
 
 <script>
   export default {
+    name: 'PeoplePanel',
     props: ['item']
   }
 </script>
 
 <style lang="scss">
 
-  /*@import './PeoplePanel.scss';*/
+  /*@import './PeoplePanelDesktop.scss';*/
+  /*@import './PeoplePanelMobile.scss';*/
 
 </style>

@@ -21,6 +21,7 @@
     from '../theme/components/Chronicle/ChroniclePanel';
 
   export default {
+    name: 'Chronicle',
     components: {
       ChroniclePanel
     },
@@ -30,6 +31,7 @@
 
 <style lang="scss">
 
-  /*@import "./Chronicle.scss";*/
+  /*@import "./ChronicleMobile.scss";*/
+  /*@import "./ChronicleDesktop.scss";*/
 
 </style>

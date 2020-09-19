@@ -1,0 +1,46 @@
+.chronicle-panel--desktop {
+  display: flex;
+  background: white;
+  width: 308px;
+  height: 450px;
+  overflow: hidden;
+
+  &__image-wrapper {
+    width: 308px;
+    height: 360px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__person {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 40px 30px;
+    position: relative;
+    top: -131px;
+    color: white;
+  }
+
+  &__position {
+    color: #D5AE75;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 30px;
+    position: relative;
+    top: -140px;
+  }
+
+  &__date {
+    color: #575756;
+    position: relative;
+    top: -87px;
+    left: 30px;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
