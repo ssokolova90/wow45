@@ -1,23 +1,23 @@
 <template>
 
-  <div>
+  <div :class="$blockClassName">
     <div
-      class="people-details"
+      :class="$e('details-wrapper')"
       v-if="item && item.frontmatter">
 
-      <div class="people-details__image-wrapper">
+      <div :class="$e('image-wrapper')">
         <img
-          class="people-details__image"
+          :class="$e('image')"
           v-if="item.frontmatter.picture"
           :src="$withBase(item.frontmatter.picture)"
           alt="">
       </div>
-      <div class="people-details__person">
+      <div :class="$e('person')">
         {{ item.frontmatter.first_name }}
         {{ item.frontmatter.last_name }}
       </div>
 
-      <div class="people-details__position">
+      <div :class="$e('position')">
         {{ item.frontmatter.position }}
       </div>
 
@@ -27,7 +27,7 @@
     </div>
 
     <people-panel
-      v-for="people in $veg.filterPages($site.pages, '/people')"
+      v-for="people in $pages('/people')"
       :item="people">
     </people-panel>
 
@@ -37,6 +37,7 @@
 
 <script>
   export default {
+    name: 'PeopleDetails',
     props: ['item']
   };
 </script>

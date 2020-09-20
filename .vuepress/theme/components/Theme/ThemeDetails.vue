@@ -1,27 +1,28 @@
 <template>
 
-  <div class="page">
+  <div :class="$blockClassName">
 
-    <div class="theme-details">
+    <div :class="$e('details')">
 
-      <div class="theme-details__image-wrapper">
+      <div :class="$e('image-wrapper')">
         <img
-          class="theme-details__image"
+          :class="$e('image')"
           v-if="$page.frontmatter.picture"
           :src="$withBase($page.frontmatter.picture)"
           alt="">
       </div>
-      <div class="theme-details__person">
+      <div :class="$e('person')">
         {{ $page.frontmatter.first_name }}
         {{ $page.frontmatter.last_name }}
       </div>
 
-      <div class="theme-details__position">
+      <div :class="$e('position')">
         {{$page.frontmatter.position}}
       </div>
 
-
-      <Content :custom="false"/>
+      <div :class="$e('content')">
+        <Content :custom="false"/>
+      </div>
 
     </div>
 
@@ -34,6 +35,7 @@
 
 <script>
   export default {
+    name: 'ThemeDetails',
   };
 </script>
 

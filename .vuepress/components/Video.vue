@@ -1,6 +1,6 @@
 <template>
 
-  <div class="video">
+  <div :class="$blockClassName">
   </div>
 
 </template>

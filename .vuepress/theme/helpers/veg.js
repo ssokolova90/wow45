@@ -69,7 +69,11 @@ export default {
 
   camelToKebab(text) {
 
-    const result = key.replace( /([A-Z])/g, " $1" );
+    if (!text || !text.length) {
+      return null;
+    }
+
+    const result = text.replace( /([A-Z])/g, " $1" );
     return result
       .split(' ')
       .join('-')

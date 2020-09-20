@@ -1,14 +1,14 @@
 <template>
 
   <div
-    :class="$veg.b(blockClassName)">
+    :class="$blockClassName">
     <div
       v-for="(item, index) in items"
       :key="index"
-      :class="$veg.b(blockClassName, 'item')">
+      :class="$e('item')">
 
       <router-link
-        :class="$veg.b(blockClassName, 'item-link')"
+        :class="$e('item-link')"
         :to="item.link">
 
         {{ item.text }}
@@ -20,21 +20,8 @@
 <script>
 
   export default {
-    props: ['modifier', 'items'],
-    computed: {
-      blockClassName() {
-
-        const deviceType = this.isMobile
-          ? 'mobile'
-          : 'desktop';
-
-        const modifier = this.modifier === 'main'
-          ? this.modifier + '-' + deviceType
-          : this.modifier;
-
-        return this.$veg.b('main-menu', null, modifier);
-      }
-    }
+    name: 'Menu',
+    props: ['items'],
   }
 </script>
 

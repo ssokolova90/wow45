@@ -2,13 +2,13 @@
 
   <router-link
     :to="$localePath"
-    :class="blockClassName">
+    :class="$blockClassName">
 
     <img
       :src="logoUrl"
       v-if="logoUrl"
       :alt="$siteTitle"
-      :class="$veg.b(blockClassName, 'image')">
+      :class="$e('image')">
 
   </router-link>
 
@@ -18,7 +18,7 @@
 <script>
 
   export default {
-
+    name: 'SidebarLogo',
     data() {
       return {
         screenWidth: 0
@@ -30,13 +30,6 @@
           ? this.$withBase(this.$site.themeConfig.mobileLogo)
           : this.$withBase(this.$site.themeConfig.logo);
       },
-      blockClassName() {
-        return this.$veg.b(
-          'sidebar-logo',
-          null,
-          this.isMobile ? 'mobile': 'desktop'
-        );
-      }
     }
   }
 </script>

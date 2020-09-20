@@ -1,15 +1,15 @@
 <template>
 
-  <div class="team">
+  <div :class="$blockClassName">
 
-    <div class="team__title">
+    <div :class="$e('title')">
       Команда проекта
     </div>
 
-    <div class="team__posts">
+    <div :class="$e('posts')">
 
       <team-panel
-        v-for="(team, index) in $veg.filterPages($site.pages, path)"
+        v-for="(team, index) in $pages(path)"
         :key="index"
         :item="team">
       </team-panel>
@@ -35,5 +35,6 @@
 
 <style lang="scss">
 
-  /*@import './Team.scss';*/
+  /*@import './TeamDesktop.scss';*/
+  /*@import './TeamMobile.scss';*/
 </style>

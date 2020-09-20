@@ -1,6 +1,6 @@
 <template>
   <header
-    :class="blockClassName">
+    :class="$blockClassName">
 
     <sidebar-logo>
     </sidebar-logo>
@@ -22,6 +22,7 @@
     from '../MainMenu/MainMenu';
 
   export default {
+    name: 'Navbar',
     components: {
       SidebarLogo,
       MainMenu
@@ -32,27 +33,6 @@
         return this.$themeLocaleConfig.nav
           || this.$site.themeConfig.nav
           || [];
-      },
-
-      deviceModifier() {
-
-        const device = this.isMobile
-          ? 'mobile'
-          : 'desktop';
-
-        if (!this.modifier) {
-          return device;
-        }
-
-        return this.modifier + '-' + device;
-      },
-
-      blockClassName() {
-        return this.$veg.b(
-          'navbar',
-          null,
-          this.deviceModifier
-        );
       },
     }
   }

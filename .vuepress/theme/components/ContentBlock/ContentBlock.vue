@@ -1,12 +1,12 @@
 <template>
-  <div class="content-block">
+  <div :class="$blockClassName">
     <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-
+    name: 'ContentBlock',
   }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-footer">
+  <div :class="$blockClassName">
 
     <main-menu
       :modifier="'nav-footer'">
@@ -10,7 +10,7 @@
 
 <script>
   export default {
-
+    name: 'NavFooter',
     props: ['items']
   }
 </script>

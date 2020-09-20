@@ -1,5 +1,5 @@
 <template>
-  <ul class="sidebar">
+  <ul :class="$blockClassName">
 
     <main-menu
       :modifier="'sidebar'"
@@ -10,6 +10,7 @@
 
 <script>
   export default {
+    name: 'Sidebar',
     props: ['items'],
     computed: {
       mainMenuItems() {

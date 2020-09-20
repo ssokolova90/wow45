@@ -1,22 +1,22 @@
 <template>
   <div
     v-if="item && item.frontmatter"
-    class="chronicle-detail-panel">
+    :class="$blockClassName">
 
-    <div class="chronicle-detail-panel__image-wrapper">
+    <div :class="$e('image-wrapper')">
       <img
-        class="chronicle-detail-panel__image"
+        :class="$e('image')"
         v-if="item.frontmatter.picture"
         :src="$withBase(item.frontmatter.picture)"
         alt="">
     </div>
 
-    <div class="chronicle-detail-panel__person">
+    <div :class="$e('person')">
       {{ item.frontmatter.first_name }}
       {{ item.frontmatter.last_name }}
     </div>
 
-    <div class="chronicle-detail-panel__position">
+    <div :class="$e('position')">
       {{ item.frontmatter.position }}
     </div>
 

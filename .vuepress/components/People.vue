@@ -1,14 +1,14 @@
 <template>
-  <div class="people">
+  <div :class="$blockClassName">
 
-    <div class="people__title">
+    <div :class="$e('title')">
       Участники
     </div>
 
-    <div class="people__posts">
+    <div :class="$e('posts')">
 
       <people-panel
-        v-for="(people, index) in $veg.filterPages($site.pages, path)"
+        v-for="(people, index) in $pages(path)"
         :key="index"
         :item="people">
       </people-panel>

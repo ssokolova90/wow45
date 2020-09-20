@@ -16,7 +16,11 @@
   import LayoutMain
     from './components/LayoutMain/LayoutMain.vue';
 
+  import $veg
+    from './helpers/veg.js';
+
   export default {
+    name: 'Layout',
 
     components: {
       LayoutDefault,
@@ -25,7 +29,7 @@
 
     computed: {
       layoutPage() {
-        return this.$veg.isMainPage(this.$page)
+        return $veg.isMainPage(this.$page)
           ? 'LayoutMain'
           : 'LayoutDefault';
       }

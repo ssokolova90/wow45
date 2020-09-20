@@ -1,27 +1,28 @@
 <template>
 
-  <div class="page">
+  <div :class="$blockClassName">
 
-    <div class="video-details">
+    <div :class="$e('details')">
 
-      <div class="video-details__image-wrapper">
+      <div :class="$e('image-wrapper')">
         <img
-          class="video-details__image"
+          :class="$e('image')"
           v-if="$page.frontmatter.picture"
           :src="$withBase($page.frontmatter.picture)"
           alt="">
       </div>
-      <div class="video-details__person">
+      <div :class="$e('person')">
         {{ $page.frontmatter.first_name }}
         {{ $page.frontmatter.last_name }}
       </div>
 
-      <div class="video-details__position">
+      <div :class="$e('position')">
         {{$page.frontmatter.position}}
       </div>
 
-      <Content :custom="false"/>
-
+      <div :class="$e('content')">
+        <Content :custom="false"/>
+      </div>
     </div>
   </div>
 
@@ -29,6 +30,7 @@
 
 <script>
   export default {
+    name: 'VideoDetails'
   };
 </script>
 

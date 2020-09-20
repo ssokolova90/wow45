@@ -2,28 +2,28 @@
 
  <div
     v-if="item && item.frontmatter"
-    :class="blockClassName">
+    :class="$blockClassName">
 
     <router-link :to="item.path">
-      <div :class="$veg.b(blockClassName, 'image-wrapper')">
+      <div :class="$e('image-wrapper')">
         <img
-          :class="$veg.b(blockClassName, 'image')"
+          :class="$e('image')"
           v-if="item.frontmatter.picture"
           :src="$withBase(item.frontmatter.picture)"
           alt="">
       </div>
 <!--      v-if="index > 1"-->
       <div
-        :class="$veg.b(blockClassName, 'theme')">
+        :class="$e('theme')">
         Темы парада памяти
       </div>
 
-      <div :class="$veg.b(blockClassName, 'title')">
+      <div :class="$e('title')">
         {{ item.frontmatter.title }}
       </div>
 
-      <div :class="$veg.b(blockClassName, 'event-date')">
-        {{ $veg.formatDate(item.frontmatter.event_date) }}
+      <div :class="$e('event-date')">
+        {{ $formatDate(item.frontmatter.event_date) }}
       </div>
     </router-link>
   </div>
@@ -33,17 +33,8 @@
 <script>
 
   export default {
-    props: ['item', 'doubleSize'],
-    computed: {
-
-      blockClassName() {
-        return this.$veg.b(
-          'theme-panel',
-          null,
-          this.doubleSize ? 'double': null
-        );
-      }
-    }
+    name: 'ThemePanel',
+    props: ['item'],
   };
 </script>
 

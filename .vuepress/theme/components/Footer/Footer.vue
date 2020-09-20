@@ -1,6 +1,6 @@
 <template>
 
-  <footer class="footer">
+  <footer :class="$blockClassName">
 
     <main-menu
       modifier="footer"
@@ -17,7 +17,7 @@
     from '../MainMenu/MainMenu.vue';
 
   export default {
-
+    name: 'Footer',
     components: {
       MainMenu
     },

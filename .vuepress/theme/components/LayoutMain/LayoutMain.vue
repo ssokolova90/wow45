@@ -1,5 +1,5 @@
 <template>
- <div :class="blockClassName">
+ <div :class="$blockClassName">
 
    <device-detect>
    </device-detect>
@@ -53,6 +53,8 @@
 
   export default {
 
+    name: 'LayoutMain',
+
     components: {
       Navbar,
       Footer,
@@ -62,16 +64,6 @@
       NewsFeed,
       Theme
     },
-
-    computed: {
-      blockClassName() {
-        return this.$veg.b(
-          'layout-main',
-          null,
-          this.isMobile ? 'mobile': 'desktop'
-        );
-      }
-    }
   }
 </script>
 

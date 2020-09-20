@@ -1,14 +1,14 @@
 <template>
-  <div class="news-feed">
+  <div :class="$blockClassName">
 
-    <div class="news-feed__title">
+    <div :class="$e('title')">
       Новости
     </div>
 
-    <div class="news-feed__posts">
+    <div :class="$e('posts')">
 
       <theme-panel
-        v-for="(chronicle, index) in $veg.filterPages($site.pages, '/chronicle')"
+        v-for="(chronicle, index) in $pages('/chronicle')"
         :item="chronicle"
         :key="index"
         :doubleSize="index < 2">

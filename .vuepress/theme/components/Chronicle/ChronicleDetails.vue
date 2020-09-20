@@ -1,5 +1,5 @@
 <template>
-  <div class="chronicle-details">
+  <div :class="$blockClassName">
 
     <chronicle-detail-panel
       item="$site.page">
@@ -8,19 +8,19 @@
     </chronicle-detail-panel>
 
 
-    <div class="chronicle-details__chronicles">
+    <div :class="$e('chronicles')">
 
       <chronicle-panel
-        v-for="post in $veg.filterPages($site.pages, '/chronicle')"
+        v-for="post in $pages('/chronicle')"
         :item="post">
       </chronicle-panel>
     </div>
 
 
-    <div class="chronicle-details__peoples">
+    <div :class="$e('peoples')">
 
       <people-panel
-        v-for="people in $veg.filterPages($site.pages, '/people')"
+        v-for="people in $pages('/people')"
         :item="people">
       </people-panel>
     </div>
@@ -39,6 +39,7 @@
     from '../../../theme/components/People/PeoplePanel';
 
   export default {
+    name: 'ChronicleDetails',
     components: {
       ChronicleDetailPanel,
       // Chronicle,

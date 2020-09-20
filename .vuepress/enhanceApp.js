@@ -7,10 +7,6 @@
 import Vue
   from 'vue';
 
-import $veg
-  from './theme/helpers/veg.js';
-
-Vue.prototype.$veg = $veg;
 
 import moment
   from "moment";
@@ -26,11 +22,16 @@ import { store }
 Vue.mixin( { store: store });
 
 
-import DeviceDetectMixin
-  from './theme/helpers/DeviceDetectMixin.js';
+import BemMixin
+  from './theme/mixins/BemMixin.js';
 
-Vue.mixin(DeviceDetectMixin);
+Vue.mixin(BemMixin);
 
+
+import VegMixin
+  from './theme/mixins/VegMixin.js';
+
+Vue.mixin(VegMixin);
 
 
 export default ({

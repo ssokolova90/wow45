@@ -1,14 +1,14 @@
 <template>
-  <div class="theme">
+  <div :class="$blockClassName">
 
-    <div class="theme__title">
+    <div :class="$e('title')">
       Темы парада памяти
     </div>
 
-    <div class="theme__posts">
+    <div :class="$e('posts')">
 
       <theme-panel
-        v-for="(theme, index) in $veg.filterPages($site.pages, path)"
+        v-for="(theme, index) in $pages(path)"
         :doubleSize="index < 2"
         :key="index"
         :item="theme">
@@ -37,6 +37,7 @@
 
 <style lang="scss">
 
-  /*@import './Theme.scss';*/
+  /*@import './ThemeDesktop.scss';*/
+  /*@import './ThemeMobile.scss';*/
 
 </style>

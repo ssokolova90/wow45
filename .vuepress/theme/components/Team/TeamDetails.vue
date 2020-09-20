@@ -1,22 +1,22 @@
 <template>
 
-  <div class="team-details">
+  <div :class="$blockClassName">
 
-    <div class="team-details__teams-list">
+    <div :class="$e('details')">
 
-      <div class="team-details__image-wrapper">
+      <div :class="$e('image-wrapper')">
         <img
-          class="team-details__image"
+          :class="$e('image')"
           v-if="$page.frontmatter.picture"
           :src="$withBase($page.frontmatter.picture)"
           alt="">
       </div>
-      <div class="team-details__person">
+      <div :class="$e('person')">
         {{ $page.frontmatter.first_name }}
         {{ $page.frontmatter.last_name }}
       </div>
 
-      <div class="team-details__position">
+      <div :class="$e('position')">
         {{ $page.frontmatter.position }}
       </div>
 
@@ -33,6 +33,7 @@
 
 <script>
   export default {
+    name: 'TeamDetails',
   };
 </script>
 

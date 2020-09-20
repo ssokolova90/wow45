@@ -1,12 +1,13 @@
 <template>
 
-  <div class="video-panel">
+  <div :class="$blockClassName">
   </div>
 
 </template>
 
 <script>
   export default {
+    name: 'VideoPanel',
     props: ['item']
   }
 </script>

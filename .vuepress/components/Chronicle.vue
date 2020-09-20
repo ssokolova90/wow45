@@ -1,14 +1,14 @@
 <template>
-  <div class="chronicle">
+  <div :class="$blockClassName">
 
-    <div class="chronicle__title">
+    <div :class="$e('title')">
       Хроника
     </div>
 
-    <div class="chronicle__posts">
+    <div :class="$e('posts')">
 
       <chronicle-panel
-        v-for="post in $veg.filterPages($site.pages, path)"
+        v-for="post in $pages(path)"
         :item="post">
       </chronicle-panel>
 

@@ -1,28 +1,31 @@
 <template>
 
   <div
-    class="main-chronicle-panel"
+    :class="$blockClassName"
     v-if="item && item.frontmatter">
 
-    <router-link :to="item.path" style="width: 100%">
-      <div class="main-chronicle-panel__image-wrapper">
+    <router-link
+      :to="item.path"
+      style="width: 100%">
+
+      <div :class="$e('image-wrapper')">
 
         <p>
           <img
-            class="main-chronicle-panel__image"
+            :class="$e('image')"
             v-if="item.frontmatter.picture"
             :src="$withBase(item.frontmatter.picture)"
             alt="">
 
-        <div class="main-chronicle-panel__title">
+        <div :class="$e('title')">
           {{ item.frontmatter.title }}
         </div>
 
-        <div class="main-chronicle-panel__description">
+        <div :class="$e('description')">
           {{ item.frontmatter.description }}
         </div>
 
-        <div class="main-chronicle-panel__more-details">
+        <div :class="$e('more-details')">
           Подробнее
         </div>
       </div>

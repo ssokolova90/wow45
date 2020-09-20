@@ -1,23 +1,24 @@
 <template>
   <div
     v-if="item && item.frontmatter"
-    :class="blockClassName">
+    :class="$blockClassName">
 
     <router-link
       :to="item.path">
 
       <div
-        :class="$veg.b(blockClassName, 'image-wrapper')">
+        :class="$e('image-wrapper')">
 
         <img
           v-if="item.frontmatter.picture"
-          :class="$veg.b(blockClassName, 'image')"
+          :class="$e('image')"
           :src="$withBase(item.frontmatter.picture)"
           alt="">
 
       </div>
 
-      <div :class="$veg.b(blockClassName, 'title')">
+      <div
+        :class="$e('title')">
         {{ item.frontmatter.title }}
       </div>
     </router-link>
@@ -26,16 +27,8 @@
 
 <script>
   export default {
-    props: ['item', 'doubleSize'],
-    computed: {
-      blockClassName() {
-        return this.$veg.b(
-          'photo-panel',
-          null,
-          this.doubleSize ? 'double': null
-        );
-      }
-    }
+    name: 'PhotoPanel',
+    props: ['item'],
   };
 </script>
 

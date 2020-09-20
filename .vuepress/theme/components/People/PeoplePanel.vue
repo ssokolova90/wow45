@@ -1,22 +1,22 @@
 <template>
   <div
     v-if="item && item.frontmatter"
-    class="people-panel">
+    :class="$blockClassName">
 
     <router-link :to="item.path">
-      <div class="people-panel__image-wrapper">
+      <div :class="$e('image-wrapper')">
         <img
-          class="people-panel__image"
+          :class="$e('image')"
           v-if="item.frontmatter.picture"
           :src="$withBase(item.frontmatter.picture)"
           alt="">
       </div>
-      <div class="people-panel__person">
+      <div :class="$e('person')">
         {{ item.frontmatter.first_name }}
         {{ item.frontmatter.last_name }}
       </div>
 
-      <div class="people-panel__position">
+      <div :class="$e('position')">
         {{ item.frontmatter.position }}
       </div>
     </router-link>

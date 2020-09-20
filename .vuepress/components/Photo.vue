@@ -1,14 +1,14 @@
 <template>
-  <div class="photo-page">
+  <div :class="$blockClassName">
 
-    <div class="photo-page__title">
+    <div :class="$e('title')">
       Фотогалерея
     </div>
 
-    <div class="photo-page__posts">
+    <div :class="$e('posts')">
 
       <photo-panel
-        v-for="(photo, index) in $veg.filterPages($site.pages, path)"
+        v-for="(photo, index) in $pages(path)"
         :item="photo"
         :key="index"
         :doubleSize="index < 2">
