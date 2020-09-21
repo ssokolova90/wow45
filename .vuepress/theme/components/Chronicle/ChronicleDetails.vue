@@ -29,8 +29,6 @@
 </template>
 
 <script>
-  // import Chronicle
-  //   from '../../../components/Chronicle';
 
   import ChronicleDetailPanel
     from './ChronicleDetailPanel';
@@ -38,11 +36,14 @@
   import PeoplePanel
     from '../../../theme/components/People/PeoplePanel';
 
+  import ChroniclePanel
+    from './ChroniclePanel';
+
   export default {
     name: 'ChronicleDetails',
     components: {
       ChronicleDetailPanel,
-      // Chronicle,
+      ChroniclePanel,
       PeoplePanel
     },
 

@@ -36,9 +36,16 @@
 </template>
 
 <script>
+
+  import PeoplePanel
+    from './PeoplePanel';
+
   export default {
     name: 'PeopleDetails',
-    props: ['item']
+    props: ['item'],
+    components: {
+      PeoplePanel,
+    }
   };
 </script>
 

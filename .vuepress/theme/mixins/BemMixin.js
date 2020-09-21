@@ -27,6 +27,7 @@ export default {
     },
 
     $blockClassName() {
+
       return $veg.b(
         $veg.camelToKebab(this.$options.name),
         null,

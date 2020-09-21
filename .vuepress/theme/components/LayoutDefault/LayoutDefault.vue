@@ -54,6 +54,8 @@
   import VideoDetails
     from '../Video/VideoDetails.vue';
 
+  import $veg
+    from '../../helpers/veg.js';
 
   export default {
     name: 'LayoutDefault',
@@ -74,7 +76,7 @@
     computed: {
 
       componentNameValue() {
-        return this.$veg.getComponentName(this.$page);
+        return $veg.getComponentName(this.$page);
       },
     }
   }

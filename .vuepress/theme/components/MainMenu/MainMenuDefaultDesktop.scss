@@ -1,12 +1,12 @@
-.main-menu--main-desktop {
+.main-menu--default-desktop {
 
+  display: flex;
+  background-color: #fff;
   box-sizing: border-box;
   white-space: nowrap;
   position: absolute;
   right: 1.5rem;
-  display: flex;
   color: #3c3c3b;
-  background: 0 0;
   max-width: 1252px;
 
   &__item {
@@ -18,7 +18,6 @@
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
-
     margin: 24px;
   }
 

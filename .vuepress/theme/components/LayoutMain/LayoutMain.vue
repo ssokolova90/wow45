@@ -7,6 +7,11 @@
    <navbar :modifier="'main'">
    </navbar>
 
+   <main-picture
+    v-if="!isMobile">
+   </main-picture>
+
+
    <content-block>
 
      <wow-block>
@@ -36,6 +41,9 @@
   import Footer
     from '../Footer/Footer';
 
+  import MainPicture
+    from '../MainPicture/MainPicture';
+
   import DeviceDetect
     from '../../DeviceDetect.vue';
 
@@ -58,6 +66,7 @@
     components: {
       Navbar,
       Footer,
+      MainPicture,
       DeviceDetect,
       ContentBlock,
       WowBlock,

@@ -1,10 +1,22 @@
 .layout-default--desktop {
 
-  padding-left: 0;
-  width: 1380px;
-  background: #e5e5e5;
-  box-shadow: 0 0 25px rgba(0,0,0,.2);
-  margin-top: -9px;
-  padding-top: 130px;
+  //padding-left: 0;
+  //width: 1380px;
+  //background: #e5e5e5;
+  //box-shadow: 0 0 25px rgba(0,0,0,.2);
+  //margin-top: -9px;
+  //padding-top: 130px;
+
+  background-image:
+          url(/images/assets/background2.jpg),
+          url(/images/assets/background1.jpg);
+
+  background-repeat: no-repeat,no-repeat;
+  background-attachment: fixed;
+  background-size: 50% 100%;
+  display: flex;
+  background-position: 100% 100%,0 0;
+  flex-direction: column;
+  align-items: center;
 }
 

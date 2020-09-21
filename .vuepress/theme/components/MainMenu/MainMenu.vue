@@ -20,7 +20,7 @@
 <script>
 
   export default {
-    name: 'Menu',
+    name: 'MainMenu',
     props: ['items'],
   }
 </script>
@@ -29,6 +29,8 @@
 
   @import './MainMenuDesktop';
   @import './MainMenuMobile';
+  @import './MainMenuDefaultDesktop';
+  @import './MainMenuDefaultMobile';
   @import './MainMenuMainDesktop';
   @import './MainMenuMainMobile';
   @import './MainMenuFooterDesktop';

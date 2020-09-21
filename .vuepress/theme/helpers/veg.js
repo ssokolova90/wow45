@@ -73,7 +73,10 @@ export default {
       return null;
     }
 
-    const result = text.replace( /([A-Z])/g, " $1" );
+    const textFix  = text.charAt(0).toLowerCase() + text.slice(1);
+
+    const result = textFix.replace( /([A-Z])/g, " $1" );
+
     return result
       .split(' ')
       .join('-')
