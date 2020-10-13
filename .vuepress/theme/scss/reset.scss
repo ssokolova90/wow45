@@ -1,0 +1,21 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Futura PT;
+  src: url('/images/assets/fonts/FuturaPTBold.otf');
+  font-weight: bold;
+}
+
+body {
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: 600;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+

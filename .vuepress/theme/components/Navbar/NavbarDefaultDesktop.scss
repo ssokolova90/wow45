@@ -1,0 +1,23 @@
+.navbar--default-desktop {
+
+  display: flex;
+  align-items: center;
+  width: 1400px;
+  z-index: 20;
+  top: 0;
+  height: 129px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+
+
+  background-image: url(/images/assets/navbar_background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: fixed;
+}
+

@@ -1,10 +1,10 @@
-const { description } = require('../../package')
+const { description } = require('../../package');
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: '',
+  title: 'Парад Памяти',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -29,6 +29,7 @@ module.exports = {
   themeConfig: {
     repo: '',
     logo: '/images/assets/logo.png',
+    mobileLogo: '/images/assets/mobile_logo.png',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -74,4 +75,4 @@ module.exports = {
     // '@vuepress/plugin-back-to-top',
     // '@vuepress/plugin-medium-zoom',
   ],
-}
+};
