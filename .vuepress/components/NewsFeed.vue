@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss">
-
-  /*@import './NewsFeedDesktop.scss';*/
-  /*@import './NewsFeedMobile.scss';*/
+  
+  @import './NewsFeedDesktop.scss';
+  @import './NewsFeedMobile.scss';
 </style>

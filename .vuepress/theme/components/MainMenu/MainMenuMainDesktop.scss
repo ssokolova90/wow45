@@ -1,9 +1,9 @@
 .main-menu--main-desktop {
 
+  left: 97px;
   box-sizing: border-box;
   white-space: nowrap;
-  position: absolute;
-  right: 1.5rem;
+  position: relative;
   display: flex;
   color: #3c3c3b;
   background: 0 0;
@@ -19,7 +19,7 @@
     line-height: 19px;
     text-transform: uppercase;
 
-    margin: 24px;
+    margin: 20px;
   }
 
   &__item-link {

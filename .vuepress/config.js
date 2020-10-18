@@ -55,10 +55,10 @@ module.exports = {
         text: 'Фотогаллерея',
         link: '/photo/',
       },
-      // {
-      //   text: 'Видео',
-      //   link: '/video/',
-      // },
+      {
+        text: 'Видео',
+        link: '/video/',
+      },
       {
         text: 'Контакты',
         link: '/about/',

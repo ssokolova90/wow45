@@ -39,7 +39,7 @@
 
 <style lang="scss">
 
-  /*@import './TeamDetailsDesktop.scss';*/
-  /*@import './TeamDetailsMobile.scss';*/
+  @import './TeamDetailsDesktop.scss';
+  @import './TeamDetailsMobile.scss';
 
 </style>

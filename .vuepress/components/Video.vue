@@ -14,6 +14,6 @@
 
 <style lang="scss">
 
-  /*@import './VideoDesktop.scss';*/
-  /*@import './VideoMobile.scss';*/
+  @import './VideoDesktop.scss';
+  @import './VideoMobile.scss';
 </style>

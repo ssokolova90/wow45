@@ -1,8 +1,14 @@
 .people-details--desktop {
-  margin: 15px;
-  padding: 15px;
+
+  display: flex;
+  gap: 30px;
+  padding: 30px;
   background: white;
-  min-height: 345px;
+
+  &__router-link {
+    //flex: 1 1 auto;
+    //border: 10px solid transparent;
+  }
 
   &__image {
     float: left;

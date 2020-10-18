@@ -24,7 +24,6 @@
 
 <style lang="scss">
 
-  .sidebar {
-
-  }
+  @import './SidebarDesktop.scss';
+  @import './SidebarMobile.scss';
 </style>

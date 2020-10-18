@@ -26,8 +26,8 @@
 
     </div>
 
-<!--    <Theme :path='"/themes"'>-->
-<!--    </Theme>-->
+    <Theme :path='"/themes"'>
+    </Theme>
 
   </div>
 
@@ -41,6 +41,6 @@
 
 <style lang="scss">
 
-  /*@import './ThemeDetailsDesktop.scss';*/
-  /*@import './ThemeDetailsMobile.scss';*/
+  @import './ThemeDetailsDesktop.scss';
+  @import './ThemeDetailsMobile.scss';
 </style>

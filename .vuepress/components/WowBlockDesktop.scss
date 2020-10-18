@@ -1,6 +1,12 @@
 .wow-block--desktop {
 
+  display: flex;
+  padding: 30px;
+
   &__chronicle {
 
+    display: flex;
+    width: 100%;
+    gap: 30px;
   }
 }

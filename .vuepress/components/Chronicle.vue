@@ -31,7 +31,7 @@
 
 <style lang="scss">
 
-  /*@import "./ChronicleMobile.scss";*/
-  /*@import "./ChronicleDesktop.scss";*/
+  @import "./ChronicleMobile.scss";
+  @import "./ChronicleDesktop.scss";
 
 </style>

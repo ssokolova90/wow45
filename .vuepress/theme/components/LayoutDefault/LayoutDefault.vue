@@ -17,24 +17,23 @@
 
     </content-block>
 
-    <footer
-      v-if="!isMobile">
-    </footer>
+    <footer-navbar v-if="!isMobile">
+    </footer-navbar>
   </div>
 </template>
 <script>
 
+  import DeviceDetect
+    from '../../DeviceDetect.vue';
+
   import Navbar
     from '../Navbar/Navbar';
 
-  import Footer
-    from '../Footer/Footer';
+  import FooterNavbar
+    from '../FooterNavbar/FooterNavbar';
 
   import ContentBlock
     from '../ContentBlock/ContentBlock';
-
-  import DeviceDetect
-    from '../../DeviceDetect.vue';
 
   import ChronicleDetails
     from '../Chronicle/ChronicleDetails.vue';
@@ -61,8 +60,8 @@
     name: 'LayoutDefault',
 
     components: {
+      FooterNavbar,
       Navbar,
-      Footer,
       ContentBlock,
       DeviceDetect,
       ChronicleDetails,

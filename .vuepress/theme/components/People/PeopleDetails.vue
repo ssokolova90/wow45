@@ -51,7 +51,7 @@
 
 <style lang="scss">
 
-/*@import './PeopleDetailsDesktop.scss';*/
+@import './PeopleDetailsDesktop.scss';
 /*@import './PeopleDetailsMobile.scss';*/
 
 </style>

@@ -1,11 +1,11 @@
 .main-menu--default-desktop {
 
   display: flex;
+  left: 90px;
   background-color: #fff;
   box-sizing: border-box;
   white-space: nowrap;
-  position: absolute;
-  right: 1.5rem;
+  position: relative;
   color: #3c3c3b;
   max-width: 1252px;
 
@@ -18,7 +18,7 @@
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
-    margin: 24px;
+    margin: 20px;
   }
 
   &__item-link {

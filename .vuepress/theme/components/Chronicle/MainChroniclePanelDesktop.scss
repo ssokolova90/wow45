@@ -1,11 +1,11 @@
 .main-chronicle-panel--desktop {
 
   display: flex;
+  flex: 1 2 auto;
   background: #E6D4B6;
   width: 645px;
   height: 430px;
-  padding: 15px;
-  margin: 15px;
+  padding: 0 15px 0 15px;
 
   &__title {
     font-style: normal;
@@ -40,5 +40,6 @@
   }
 
   &__more-details {
+    color: #000000;
   }
 }

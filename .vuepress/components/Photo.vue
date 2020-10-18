@@ -37,6 +37,6 @@
 
 <style lang="scss">
 
-  /*@import './PhotoDesktop.scss';*/
-  /*@import './PhotoMobile.scss';*/
+  @import './PhotoDesktop.scss';
+  @import './PhotoMobile.scss';
 </style>

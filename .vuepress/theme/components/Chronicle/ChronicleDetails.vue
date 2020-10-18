@@ -17,13 +17,13 @@
     </div>
 
 
-    <div :class="$e('peoples')">
+<!--    <div :class="$e('peoples')">-->
 
-      <people-panel
-        v-for="people in $pages('/people')"
-        :item="people">
-      </people-panel>
-    </div>
+<!--      <people-panel-->
+<!--        v-for="people in $pages('/people')"-->
+<!--        :item="people">-->
+<!--      </people-panel>-->
+<!--    </div>-->
 
   </div>
 </template>
@@ -52,6 +52,6 @@
 
 <style lang="scss">
 
-  /*@import './ChronicleDetailsDesktop.scss';*/
-  /*@import './ChronicleDetailsMobile.scss';*/
+  @import './ChronicleDetailsDesktop.scss';
+  @import './ChronicleDetailsMobile.scss';
 </style>

@@ -1,3 +1,8 @@
 .sidebar-logo--desktop {
 
+  &__image {
+    display: block;
+    left: 25px;
+    position: relative;
+  }
 }

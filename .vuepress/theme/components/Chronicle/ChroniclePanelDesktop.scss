@@ -1,9 +1,13 @@
 .chronicle-panel--desktop {
   display: flex;
+  //display: inline-block;
+  //margin: 15px;
   background: white;
   width: 308px;
-  height: 450px;
-  overflow: hidden;
+  height: 430px;
+  //overflow: hidden;
+  //flex: 1 1 auto;
+  //margin: 0 14px 0 9px;
 
   &__image-wrapper {
     width: 308px;
@@ -21,7 +25,6 @@
     padding: 40px 30px;
     position: relative;
     top: -131px;
-    color: white;
   }
 
   &__position {

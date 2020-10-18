@@ -1,9 +1,12 @@
 .chronicle-details--desktop {
-  display: flex;
+  display: block;
+  width: 100%;
 
   &__chronicles {
 
-    padding: 15px;
+    display: block;
+    width: 100%;
+    //padding: 15px;
     background: #fff;
   }
 

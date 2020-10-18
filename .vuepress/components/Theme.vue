@@ -37,7 +37,7 @@
 
 <style lang="scss">
 
-  /*@import './ThemeDesktop.scss';*/
-  /*@import './ThemeMobile.scss';*/
+  @import './ThemeDesktop.scss';
+  @import './ThemeMobile.scss';
 
 </style>

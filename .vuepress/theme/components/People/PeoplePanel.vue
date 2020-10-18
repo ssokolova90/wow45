@@ -3,7 +3,9 @@
     v-if="item && item.frontmatter"
     :class="$blockClassName">
 
-    <router-link :to="item.path">
+    <router-link
+      :to="item.path"
+      :class="$e('router-link')">
       <div :class="$e('image-wrapper')">
         <img
           :class="$e('image')"
@@ -33,7 +35,7 @@
 
 <style lang="scss">
 
-  /*@import './PeoplePanelDesktop.scss';*/
+  @import './PeoplePanelDesktop.scss';
   /*@import './PeoplePanelMobile.scss';*/
 
 </style>

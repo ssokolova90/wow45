@@ -39,6 +39,6 @@
 
 <style lang="scss">
 
-  /*@import './ChroniclePanelDesktop.scss';*/
-  /*@import './ChroniclePanelMobile.scss';*/
+  @import './ChroniclePanelDesktop.scss';
+  @import './ChroniclePanelMobile.scss';
 </style>

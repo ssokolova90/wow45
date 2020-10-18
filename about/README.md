@@ -1,1 +1,2 @@
-Тут будут указаны наши контакты
+<Chronicle :path='"/chronicle"'>
+</Chronicle>

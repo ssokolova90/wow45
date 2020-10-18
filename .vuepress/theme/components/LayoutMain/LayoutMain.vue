@@ -1,4 +1,5 @@
 <template>
+
  <div :class="$blockClassName">
 
    <device-detect>
@@ -25,9 +26,9 @@
 
    </content-block>
 
-   <footer
+   <footer-navbar
      v-if="!isMobile">
-   </footer>
+   </footer-navbar>
 
  </div>
 </template>
@@ -38,8 +39,8 @@
   import Navbar
     from '../Navbar/Navbar';
 
-  import Footer
-    from '../Footer/Footer';
+  import FooterNavbar
+    from '../FooterNavbar/FooterNavbar';
 
   import MainPicture
     from '../MainPicture/MainPicture';
@@ -65,7 +66,7 @@
 
     components: {
       Navbar,
-      Footer,
+      FooterNavbar,
       MainPicture,
       DeviceDetect,
       ContentBlock,

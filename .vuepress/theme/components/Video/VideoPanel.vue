@@ -14,7 +14,6 @@
 
 <style lang="scss">
 
-  /*@import './VideoPanelDesktop.scss';*/
-  /*@import './VideoPanelMobile.scss';*/
-
+  @import './VideoPanelDesktop.scss';
+  @import './VideoPanelMobile.scss';
 </style>

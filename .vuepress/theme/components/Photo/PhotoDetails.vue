@@ -27,8 +27,8 @@
 
     </div>
 
-    <!--  <photo :path='"/photo"'>-->
-    <!--  </photo>-->
+      <photo :path='"/photo"'>
+      </photo>
   </div>
 
 </template>
@@ -42,6 +42,6 @@
 
 <style lang="scss">
 
-  /*@import './PhotoDetailsDesktop.scss';*/
-  /*@import './PhotoDetailsMobile.scss';*/
+  @import './PhotoDetailsDesktop.scss';
+  @import './PhotoDetailsMobile.scss';
 </style>

@@ -1,3 +1,36 @@
 .main-menu--footer-desktop {
 
+  display: flex;
+  left: 16px;
+  top: 30px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+  color: #3c3c3b;
+  max-width: 1252px;
+
+  &__item {
+
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 20px;
+  }
+
+  &__item-link {
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3c3c3b;
+    text-decoration: none;
+  }
+
+  &__item-link:hover {
+    color: #d5ae75;
+  }
 }

@@ -34,7 +34,7 @@
 
 <style lang="scss">
 
-  /*@import './PhotoPanelDesktop.scss';*/
+  @import './PhotoPanelDesktop.scss';
   /*@import './PhotoPanelMobile.scss';*/
   /*@import './PhotoPanelDoubleDesktop.scss';*/
   /*@import './PhotoPanelDoubleMobile.scss';*/

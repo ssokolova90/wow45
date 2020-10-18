@@ -2,6 +2,10 @@
 
   <footer :class="$blockClassName">
 
+    <div :class="$e('title')">
+      © Парад Памяти, посвящённый военному параду в г. Куйбышеве 7 ноября 1941 года.
+    </div>
+
     <main-menu
       modifier="footer"
       :items="mainMenuItems">
@@ -17,7 +21,7 @@
     from '../MainMenu/MainMenu.vue';
 
   export default {
-    name: 'Footer',
+    name: 'FooterNavbar',
     components: {
       MainMenu
     },
@@ -33,7 +37,7 @@
 
 <style lang="scss">
 
-  @import './FooterDesktop.scss';
-  @import './FooterMobile.scss';
+  @import './FooterNavbarDesktop.scss';
+  @import './FooterNavbarMobile.scss';
 </style>
 

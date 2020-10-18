@@ -41,9 +41,9 @@
 <style lang="scss">
 
 
-  /*@import './ThemePanelDesktop.scss';*/
-  /*@import './ThemePanelMobile.scss';*/
-  /*@import './ThemePanelDoubleDesktop.scss';*/
-  /*@import './ThemePanelDoubleMobile.scss';*/
+  @import './ThemePanelDesktop.scss';
+  @import './ThemePanelMobile.scss';
+  @import './ThemePanelDoubleDesktop.scss';
+  @import './ThemePanelDoubleMobile.scss';
 
 </style>

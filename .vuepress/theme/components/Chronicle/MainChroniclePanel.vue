@@ -44,6 +44,6 @@
 
 <style lang="scss">
 
-  /*@import './MainChroniclePanelDesktop.scss';*/
-  /*@import './MainChroniclePanelMobile.scss';*/
+  @import './MainChroniclePanelDesktop.scss';
+  @import './MainChroniclePanelMobile.scss';
 </style>

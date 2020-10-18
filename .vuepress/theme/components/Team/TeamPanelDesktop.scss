@@ -4,6 +4,12 @@
   width: 308px;
   height: 500px;
   overflow: hidden;
+  flex: 1 1 auto;
+
+  &__router-link {
+    flex: 1 1 auto;
+    border: 10px solid transparent;
+  }
 
   &__image-wrapper {
     width: 308px;
@@ -17,6 +23,8 @@
   &__person {
     color: #000;
     font-size: 24px;
+    font-style: normal;
+    text-decoration: none;
     line-height: 28px;
     padding: 40px 30px;
   }
@@ -24,6 +32,8 @@
   &__position {
     color: #D5AE75;
     font-size: 13px;
+    font-style: normal;
+    text-decoration: none;
     line-height: 18px;
     padding: 0 30px;
   }

@@ -32,6 +32,6 @@
 
 <style lang="scss">
 
-  /*@import './PeopleDesktop.scss';*/
-  /*@import './PeopleMobile.scss';*/
+  @import './PeopleDesktop.scss';
+  @import './PeopleMobile.scss';
 </style>
