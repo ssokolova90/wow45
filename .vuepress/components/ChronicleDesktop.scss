@@ -9,8 +9,10 @@
 
   &__posts {
     display: flex;
+    gap: 30px;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 30px;
+    padding-bottom: 30px;
   }
 }

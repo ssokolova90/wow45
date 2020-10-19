@@ -1,12 +1,13 @@
 .team-details--desktop {
   margin: 15px;
   padding: 15px;
-  background: white;
   min-height: 360px;
 
   &__image {
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 15px;
+    width: 800px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

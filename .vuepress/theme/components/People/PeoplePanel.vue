@@ -6,13 +6,13 @@
     <router-link
       :to="item.path"
       :class="$e('router-link')">
-      <div :class="$e('image-wrapper')">
-        <img
-          :class="$e('image')"
-          v-if="item.frontmatter.picture"
-          :src="$withBase(item.frontmatter.picture)"
-          alt="">
+
+      <div
+        :class="$e('image')"
+        :style="{backgroundImage: 'url(' + item.frontmatter.picture + ')' }"
+        v-if="item.frontmatter.picture">
       </div>
+
       <div :class="$e('person')">
         {{ item.frontmatter.first_name }}
         {{ item.frontmatter.last_name }}
@@ -36,6 +36,6 @@
 <style lang="scss">
 
   @import './PeoplePanelDesktop.scss';
-  /*@import './PeoplePanelMobile.scss';*/
+  @import './PeoplePanelMobile.scss';
 
 </style>

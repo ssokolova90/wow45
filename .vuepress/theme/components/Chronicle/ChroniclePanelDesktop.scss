@@ -1,45 +1,47 @@
 .chronicle-panel--desktop {
   display: flex;
-  //display: inline-block;
-  //margin: 15px;
   background: white;
   width: 308px;
   height: 430px;
-  //overflow: hidden;
-  //flex: 1 1 auto;
-  //margin: 0 14px 0 9px;
-
-  &__image-wrapper {
-    width: 308px;
-    height: 360px;
-  }
 
   &__image {
-    width: 100%;
+    width: 308px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
   }
 
-  &__person {
-    color: #000;
-    font-size: 24px;
+
+  &__title {
+    width: 250px;
+    height: 118px;
+    overflow: hidden;
+
+    color: #3C3C3B;
+    font-size: 22px;
     line-height: 28px;
-    padding: 40px 30px;
+    top: 40px;
+    left: 30px;
     position: relative;
-    top: -131px;
   }
 
-  &__position {
-    color: #D5AE75;
-    font-size: 13px;
-    line-height: 18px;
-    padding: 0 30px;
-    position: relative;
-    top: -140px;
-  }
-
-  &__date {
+  &__theme {
     color: #575756;
     position: relative;
-    top: -87px;
+    top: 15px;
+    left: 30px;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  &__event-date {
+    color: #575756;
+    position: relative;
+    top: 65px;
     left: 30px;
     font-size: 13px;
     line-height: 18px;

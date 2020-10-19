@@ -11,6 +11,8 @@
           :src="$withBase($page.frontmatter.picture)"
           alt="">
       </div>
+
+
       <div :class="$e('person')">
         {{ $page.frontmatter.first_name }}
         {{ $page.frontmatter.last_name }}
@@ -24,8 +26,6 @@
 
     </div>
 
-<!--    <team :path='"/team"'>-->
-<!--    </team>-->
 
   </div>
 

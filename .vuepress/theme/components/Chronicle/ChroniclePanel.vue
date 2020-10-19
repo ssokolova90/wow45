@@ -5,26 +5,25 @@
 
     <router-link :to="item.path">
 
-      <div :class="$e('image-wrapper')">
-        <img
-          :class="$e('image')"
-          v-if="item.frontmatter.picture"
-          :src="$withBase(item.frontmatter.picture)"
-          alt="">
+      <div
+        :class="$e('image')"
+        v-if="item.frontmatter.picture"
+        :style="{backgroundImage: 'url(' + item.frontmatter.picture + ')' }">
       </div>
 
-      <div :class="$e('person')">
-        {{ item.frontmatter.first_name }}
-        {{ item.frontmatter.last_name }}
+      <div
+        :class="$e('theme')">
+        Темы парада памяти
       </div>
 
-      <div :class="$e('position')">
-        {{ item.frontmatter.position }}
+      <div :class="$e('title')">
+        {{ item.frontmatter.title }}
       </div>
 
-      <div :class="$e('date')">
+      <div :class="$e('event-date')">
         {{ $formatDate(item.frontmatter.event_date) }}
       </div>
+
     </router-link>
   </div>
 

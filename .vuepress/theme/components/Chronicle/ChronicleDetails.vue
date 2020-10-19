@@ -1,50 +1,45 @@
 <template>
+
   <div :class="$blockClassName">
 
-    <chronicle-detail-panel
-      item="$site.page">
+    <div :class="$e('details')">
+
+      <div
+        :class="$e('image')"
+        :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')' }"
+        v-if="$page.frontmatter.picture"
+      >
+      </div>
+
+      <div :class="$e('person')">
+        {{ $page.frontmatter.first_name }}
+        {{ $page.frontmatter.last_name }}
+      </div>
+
+      <div :class="$e('position')">
+        {{ $page.frontmatter.position }}
+      </div>
 
       <Content :custom="false"/>
-    </chronicle-detail-panel>
 
+      <chronicle :path="'/chronicle'">
+      </chronicle>
 
-    <div :class="$e('chronicles')">
-
-      <chronicle-panel
-        v-for="post in $pages('/chronicle')"
-        :item="post">
-      </chronicle-panel>
     </div>
-
-
-<!--    <div :class="$e('peoples')">-->
-
-<!--      <people-panel-->
-<!--        v-for="people in $pages('/people')"-->
-<!--        :item="people">-->
-<!--      </people-panel>-->
-<!--    </div>-->
-
   </div>
+  
 </template>
 
 <script>
 
-  import ChronicleDetailPanel
-    from './ChronicleDetailPanel';
 
-  import PeoplePanel
-    from '../../../theme/components/People/PeoplePanel';
-
-  import ChroniclePanel
-    from './ChroniclePanel';
+  import Chronicle from "../../../components/Chronicle";
 
   export default {
     name: 'ChronicleDetails',
+    props: ['item'],
     components: {
-      ChronicleDetailPanel,
-      ChroniclePanel,
-      PeoplePanel
+      Chronicle
     },
 
   };

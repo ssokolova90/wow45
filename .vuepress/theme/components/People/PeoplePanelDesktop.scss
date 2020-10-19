@@ -6,21 +6,30 @@
   width: 308px;
   height: 360px;
 
-  flex: 1 1 auto;
-
   &__router-link {
-    //flex: 1 1 auto;
-    //border: 10px solid transparent;
   }
 
   &__image {
-    width: 100%;
+
+    display: flex;
+    background: white;
+    overflow: hidden;
+    width: 318px;
+    height: 360px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
   }
 
   &__person {
     font-size: 24px;
     line-height: 28px;
-    padding: 40px 30px;
+    padding: 40px 15px 15px 30px;
+    height: 34px;
+    overflow: hidden;;
+
     position: relative;
     top: -160px;
     color: white;

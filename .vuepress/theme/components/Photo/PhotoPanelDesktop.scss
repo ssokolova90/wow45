@@ -5,13 +5,17 @@
   height: 430px;
   overflow: hidden;
 
-  &__image-wrapper {
-    width: 308px;
-    height: 198px;
-  }
-
   &__image {
-    width: 100%;
+    display: flex;
+    background: white;
+    overflow: hidden;
+    width: 308px;
+    height: 247px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
   }
 
   &__title {

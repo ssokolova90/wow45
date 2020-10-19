@@ -7,15 +7,23 @@
       :to="item.path">
 
       <div
-        :class="$e('image-wrapper')">
-
-        <img
-          v-if="item.frontmatter.picture"
-          :class="$e('image')"
-          :src="$withBase(item.frontmatter.picture)"
-          alt="">
-
+        :class="$e('image')"
+        v-if="item.frontmatter.picture"
+        :style="{backgroundImage: 'url(' + item.frontmatter.picture + ')' }">
       </div>
+
+
+
+<!--      <div-->
+<!--        :class="$e('image-wrapper')">-->
+
+<!--        <img-->
+<!--          v-if="item.frontmatter.picture"-->
+<!--          :class="$e('image')"-->
+<!--          :src="$withBase(item.frontmatter.picture)"-->
+<!--          alt="">-->
+
+<!--      </div>-->
 
       <div
         :class="$e('title')">

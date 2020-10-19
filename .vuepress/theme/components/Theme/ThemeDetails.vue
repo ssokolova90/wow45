@@ -1,23 +1,24 @@
 <template>
 
-  <div :class="$blockClassName">
+  <div
+    :class="$blockClassName">
 
-    <div :class="$e('details')">
+    <div
+      :class="$e('details')"
+      v-if="$page && $page.frontmatter && $page.frontmatter.title">
 
-      <div :class="$e('image-wrapper')">
-        <img
-          :class="$e('image')"
-          v-if="$page.frontmatter.picture"
-          :src="$withBase($page.frontmatter.picture)"
-          alt="">
-      </div>
-      <div :class="$e('person')">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
+      <div
+        :class="$e('image')"
+        :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')'}"
+        v-if="$page.frontmatter.picture">
       </div>
 
-      <div :class="$e('position')">
-        {{$page.frontmatter.position}}
+      <div :class="$e('title')">
+        {{ $page.frontmatter.title }}
+      </div>
+
+      <div :class="$e('event-date')">
+        {{ $formatDate($page.frontmatter.event_date) }}
       </div>
 
       <div :class="$e('content')">

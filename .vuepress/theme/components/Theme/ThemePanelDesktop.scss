@@ -5,23 +5,18 @@
   height: 430px;
   overflow: hidden;
 
-  &__image-wrapper {
-    width: 308px;
-    height: 198px;
-  }
-
   &__image {
-    //width: 100%;
-
     width: 308px;
     height: 190px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   &__title {
     width: 250px;
     height: 118px;
     overflow: hidden;
-
     color: #3C3C3B;
     font-size: 22px;
     line-height: 28px;

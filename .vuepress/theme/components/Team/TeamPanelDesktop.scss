@@ -4,20 +4,19 @@
   width: 308px;
   height: 500px;
   overflow: hidden;
-  flex: 1 1 auto;
 
   &__router-link {
-    flex: 1 1 auto;
-    border: 10px solid transparent;
-  }
-
-  &__image-wrapper {
-    width: 308px;
-    height: 360px;
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
 
   &__image {
-    width: 100%;
+    width: 308px;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   &__person {
@@ -26,7 +25,11 @@
     font-style: normal;
     text-decoration: none;
     line-height: 28px;
-    padding: 40px 30px;
+    height: 62px;
+    overflow: hidden;
+    padding: 24px 11px 0px 11px;
+    //width: 286px;
+
   }
 
   &__position {
@@ -35,7 +38,9 @@
     font-style: normal;
     text-decoration: none;
     line-height: 18px;
-    padding: 0 30px;
+    height: 33px;
+    overflow: hidden;
+    padding: 6px 19px 0px 13px;
   }
 }
 
