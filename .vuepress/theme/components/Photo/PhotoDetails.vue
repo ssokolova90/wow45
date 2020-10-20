@@ -2,31 +2,22 @@
 
   <div :class="$blockClassName">
 
-    <div :class="$e('details')">
+    <div
+      v-if="$page && $page.frontmatter && $page.frontmatter.picture"
+      :class="$e('details')">
 
-      <div
+      <img
+        v-if="$page.frontmatter.picture"
         :class="$e('image')"
-        v-if="$page.frontmatter.picture">
-      </div>
-
-      <div :class="$e('person')">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
-      </div>
-
-      <div :class="$e('position')">
-        {{$page.frontmatter.position}}
-      </div>
-
-      <div :class="$e('content')">
-
-        <Content :custom="false"/>
-      </div>
+        :src="$withBase($page.frontmatter.picture)"
+        alt="">
 
     </div>
 
-      <photo :path='"/photo"'>
-      </photo>
+
+    <photo :path='"/photo"'>
+    </photo>
+
   </div>
 
 </template>

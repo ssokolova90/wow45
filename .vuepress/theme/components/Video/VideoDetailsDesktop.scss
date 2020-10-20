@@ -1,2 +1,7 @@
 .video-details--desktop {
+
+  &__details {
+    min-height: 700px;
+    background: white;
+  }
 }

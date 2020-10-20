@@ -2,15 +2,17 @@
 
   <div :class="$blockClassName">
 
-    <div :class="$e('details')">
+    <div
+      v-if="$page && $page.frontmatter && $page.frontmatter.picture"
+      :class="$e('details')">
 
-      <div :class="$e('image-wrapper')">
-        <img
-          :class="$e('image')"
-          v-if="$page.frontmatter.picture"
-          :src="$withBase($page.frontmatter.picture)"
-          alt="">
+      <div
+        :class="$e('image')"
+        :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')' }"
+        v-if="$page.frontmatter.picture"
+      >
       </div>
+
       <div :class="$e('person')">
         {{ $page.frontmatter.first_name }}
         {{ $page.frontmatter.last_name }}
@@ -22,10 +24,10 @@
 
       <Content :custom="false"/>
 
-      <people :path="'/people'">
-      </people>
-
     </div>
+
+    <people :path="'/people'">
+    </people>
 
   </div>
 

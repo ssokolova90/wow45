@@ -2,15 +2,31 @@
   display: block;
   width: 100%;
 
-  &__chronicles {
+  &__publication {
 
-    display: block;
-    width: 100%;
-    //padding: 15px;
-    background: #fff;
+    min-height: 50vh;
+    background: white;
+    padding: 30px;
   }
 
-  &__peoples {
-    padding: 15px;
+  &__image {
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    margin: 15px 30px 15px 15px;
+  }
+
+  &__title {
+    padding: 30px 0 34px 0;
+    font-size: 32px;
+    display: flex;
+  }
+
+  &__position {
+    padding: 0 0 30px 0;
   }
 }

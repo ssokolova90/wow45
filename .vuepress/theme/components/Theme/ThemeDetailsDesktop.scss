@@ -2,14 +2,28 @@
 
   &__details {
 
+    min-height: 700px;
+    background: white;
+    padding: 30px;
   }
 
   &__image {
-    width: 800px;
-    height: 600px;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: inline-block;
+    float: left;
+    margin: 15px 30px 15px 15px;
+
+    width: 800px;
+    height: 600px;
+  }
+
+  &__title {
+    padding: 30px 0 34px 0;
+    font-size: 32px;
+    display: flex;
   }
 
 }

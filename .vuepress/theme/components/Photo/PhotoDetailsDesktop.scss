@@ -1,12 +1,13 @@
 .photo-details--desktop {
 
   &__details {
+
+    min-height: 50vh;
+    background: white;
+    padding: 30px;
   }
 
   &__image {
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 15px;
     width: 100%;
   }
 }

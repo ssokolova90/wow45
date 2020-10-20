@@ -4,25 +4,35 @@
 
     <div :class="$e('details')">
 
-      <div :class="$e('image-wrapper')">
-        <img
+      <div
+        v-if="$page && $page.frontmatter && $page.frontmatter.picture"
+        :class="$e('publication')">
+
+        <div
           :class="$e('image')"
-          v-if="$page.frontmatter.picture"
-          :src="$withBase($page.frontmatter.picture)"
-          alt="">
+          :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')' }"
+          v-if="$page.frontmatter.picture">
+        </div>
+
+        <div :class="$e('person')">
+          {{ $page.frontmatter.first_name }}
+          {{ $page.frontmatter.last_name }}
+        </div>
+
+        <div :class="$e('position')">
+          {{ $page.frontmatter.position }}
+        </div>
+
+        <Content :custom="false"/>
+
       </div>
 
+      <Team
+        v-if="$page && $page.frontmatter && $page.frontmatter.picture"
+        :path='"/team"'>
+      </Team>
 
-      <div :class="$e('person')">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
-      </div>
-
-      <div :class="$e('position')">
-        {{ $page.frontmatter.position }}
-      </div>
-
-      <Content :custom="false"/>
+      <Content v-else :custom="false"/>
 
     </div>
 
@@ -32,8 +42,10 @@
 </template>
 
 <script>
+  import Team from "../../../components/Team";
   export default {
     name: 'TeamDetails',
+    components: {Team},
   };
 </script>
 

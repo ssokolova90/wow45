@@ -54,7 +54,8 @@ export default {
       'photo': 'PhotoDetails',
       'team': 'TeamDetails',
       'themes': 'ThemeDetails',
-      'video': 'VideoDetails'
+      'video': 'VideoDetails',
+      'about': 'VideoDetails',
     };
 
     const detailPath = $page.regularPath.split('/');

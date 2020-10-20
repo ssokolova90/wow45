@@ -2,32 +2,45 @@
 
   <div :class="$blockClassName">
 
-    <div :class="$e('details')">
+
+    <div :class="$e('details')"
+         v-if="$page && $page.frontmatter && $page.frontmatter.picture"
+    >
 
       <div
-        :class="$e('image')"
-        :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')' }"
-        v-if="$page.frontmatter.picture"
-      >
+        :class="$e('publication')">
+
+        <div
+          :class="$e('image')"
+          :style="{backgroundImage: 'url(' + $page.frontmatter.picture + ')' }"
+          v-if="$page.frontmatter.picture">
+        </div>
+
+        <div :class="$e('title')">
+          {{ $page.frontmatter.title }}
+        </div>
+
+        <div :class="$e('position')">
+          {{ $page.frontmatter.position }}
+        </div>
+
+        <Content :custom="false"/>
+
       </div>
 
-      <div :class="$e('person')">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
-      </div>
-
-      <div :class="$e('position')">
-        {{ $page.frontmatter.position }}
-      </div>
-
-      <Content :custom="false"/>
-
-      <chronicle :path="'/chronicle'">
+      <chronicle
+        :path="'/chronicle'">
       </chronicle>
 
     </div>
+
+    <chronicle
+      v-else
+      :path="'/chronicle'">
+    </chronicle>
+
   </div>
-  
+
 </template>
 
 <script>
