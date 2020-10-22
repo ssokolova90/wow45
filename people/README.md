@@ -1,2 +1,0 @@
-<People :path='"/people"'>
-</People>
