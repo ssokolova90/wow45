@@ -1,2 +1,0 @@
-<Theme :path='"/themes"'>
-</Theme>
