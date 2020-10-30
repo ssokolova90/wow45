@@ -1,8 +1,8 @@
 ---
 first_name: Участники Парада Памяти 2011 года
-middle_name: Перечень
-last_name: " парадных расчетов"
-position: Участники Парада Памяти 2011 года
+middle_name: .
+last_name: " ."
+position: Перечень парадных расчетов
 picture: /images/uploads/2017-21.jpg
 ---
 Военная колонна Парада Памяти:
