@@ -11,9 +11,8 @@
           :src="$withBase($page.frontmatter.picture)"
           alt="">
       </div>
-      <div :class="$e('person')">
-        {{ $page.frontmatter.first_name }}
-        {{ $page.frontmatter.last_name }}
+      <div :class="$e('description')">
+        {{ $page.frontmatter.description }}
       </div>
 
       <div :class="$e('position')">
@@ -21,7 +20,7 @@
       </div>
 
       <div :class="$e('content')">
-        <Content :custom="false"/>
+<!--        <Content :custom="false"/>-->
       </div>
     </div>
   </div>

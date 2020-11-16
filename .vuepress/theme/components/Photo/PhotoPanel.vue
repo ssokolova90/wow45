@@ -8,22 +8,9 @@
 
       <div
         :class="$e('image')"
-        v-if="item.frontmatter.picture"
-        :style="{backgroundImage: 'url(' + item.frontmatter.picture + ')' }">
+        v-if="picture"
+        :style="{backgroundImage: picture }">
       </div>
-
-
-
-<!--      <div-->
-<!--        :class="$e('image-wrapper')">-->
-
-<!--        <img-->
-<!--          v-if="item.frontmatter.picture"-->
-<!--          :class="$e('image')"-->
-<!--          :src="$withBase(item.frontmatter.picture)"-->
-<!--          alt="">-->
-
-<!--      </div>-->
 
       <div
         :class="$e('title')">
@@ -37,6 +24,26 @@
   export default {
     name: 'PhotoPanel',
     props: ['item'],
+    computed: {
+      picture() {
+        if (!this.item
+          || !this.item.frontmatter
+          || !this.item.frontmatter.Photo
+          || !this.item.frontmatter.Photo.length
+          || !this.item.frontmatter.Photo[0]
+          || !this.item.frontmatter.Photo[0].picture ) {
+
+          return null;
+        }
+
+        let photo = this.item.frontmatter.Photo[0].picture;
+
+        return 'url(' + photo + ')';
+      }
+    },
+    mounted() {
+      console.log(this.item);
+    }
   };
 </script>
 

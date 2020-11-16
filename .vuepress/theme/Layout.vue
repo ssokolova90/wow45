@@ -29,10 +29,11 @@
 
     computed: {
       layoutPage() {
+
         return $veg.isMainPage(this.$page)
           ? 'LayoutMain'
           : 'LayoutDefault';
-      }
+      },
     }
   }
 </script>

@@ -22,13 +22,13 @@
       </div>
 
       <div :class="$e('content')">
-        <Content :custom="false"/>
+<!--        <Content :custom="false"/>-->
       </div>
 
     </div>
 
-    <Theme :path='"/themes"'>
-    </Theme>
+<!--    <Theme :path='"/themes"'>-->
+<!--    </Theme>-->
 
   </div>
 

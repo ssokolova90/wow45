@@ -23,24 +23,15 @@
     overflow: hidden;
   }
 
-  &__person {
+  &__title {
     font-size: 24px;
     line-height: 28px;
     padding: 40px 15px 15px 30px;
-    height: 34px;
+    height: 41px;
     overflow: hidden;;
 
     position: relative;
     top: -160px;
     color: white;
-  }
-
-  &__position {
-    color: #D5AE75;
-    font-size: 13px;
-    line-height: 18px;
-    padding: 0 30px;
-    position: relative;
-    top: -169px;
   }
 }

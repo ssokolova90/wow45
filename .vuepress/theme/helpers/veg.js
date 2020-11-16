@@ -45,26 +45,52 @@ export default {
       && detailPath[1].length == 0;
   },
 
+  getFirstLevelPage($page) {
+
+    const detailPath = $page.regularPath.split('/');
+
+    if (detailPath.length === 3
+      && detailPath[1].length
+      && !detailPath[2].length) {
+
+      return detailPath[1];
+    }
+
+    return null;
+  },
 
   getComponentName($page) {
 
     const componentsMap = {
-      'chronicle': 'ChronicleDetails',
-      'people': 'PeopleDetails',
-      'photo': 'PhotoDetails',
-      'team': 'TeamDetails',
-      'themes': 'ThemeDetails',
-      'video': 'VideoDetails',
-      'about': 'VideoDetails',
+      'chroniclealbum': 'ChronicleItem',
+      'peoplealbum': 'PeopleItem',
+      'photoalbum': 'PhotoItem',
+      'teamalbum': 'TeamItem',
+      'themesalbum': 'ThemeItem',
     };
+
+    // если нужно вывести список первого уровня
 
     const detailPath = $page.regularPath.split('/');
 
-    if (!detailPath[1] || !detailPath[1].length) {
+    console.log ('detailPath', detailPath);
+
+    // if (detailPath.length === 3
+    //     && detailPath[1].length
+    //     && !detailPath[2].length
+    //     && componentsMap[detailPath[1]]) {
+    //
+    //   return componentsMap[detailPath[1]];
+    // }
+    //
+    // return null;
+
+    if (!detailPath[2] || !detailPath[2].length) {
       return null;
     }
 
     const openedPagePath = detailPath[1];
+
     return componentsMap[openedPagePath];
   },
 

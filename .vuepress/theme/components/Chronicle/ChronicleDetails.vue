@@ -24,20 +24,20 @@
           {{ $page.frontmatter.position }}
         </div>
 
-        <Content :custom="false"/>
+<!--        <Content :custom="false"/>-->
 
       </div>
 
-      <chronicle
-        :path="'/chronicle'">
-      </chronicle>
+<!--      <chronicle-->
+<!--        :path="'/chronicle'">-->
+<!--      </chronicle>-->
 
     </div>
 
-    <chronicle
-      v-else
-      :path="'/chronicle'">
-    </chronicle>
+<!--    <chronicle-->
+<!--      v-else-->
+<!--      :path="'/chronicle'">-->
+<!--    </chronicle>-->
 
   </div>
 
@@ -46,7 +46,7 @@
 <script>
 
 
-  import Chronicle from "../../../components/Chronicle";
+  import Chronicle from "./Chronicle";
 
   export default {
     name: 'ChronicleDetails',

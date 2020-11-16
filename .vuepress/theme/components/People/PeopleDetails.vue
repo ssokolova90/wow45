@@ -26,8 +26,8 @@
 
     </div>
 
-    <people :path="'/people'">
-    </people>
+<!--    <people :path="'/people'">-->
+<!--    </people>-->
 
   </div>
 
@@ -37,7 +37,7 @@
 
   import PeoplePanel
     from './PeoplePanel';
-  import People from "../../../components/People";
+  import People from "./People";
 
   export default {
     name: 'PeopleDetails',

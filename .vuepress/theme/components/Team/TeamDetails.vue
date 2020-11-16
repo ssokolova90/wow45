@@ -23,16 +23,16 @@
           {{ $page.frontmatter.position }}
         </div>
 
-        <Content :custom="false"/>
+<!--        <Content :custom="false"/>-->
 
       </div>
 
-      <Team
-        v-if="$page && $page.frontmatter && $page.frontmatter.picture"
-        :path='"/team"'>
-      </Team>
+<!--      <Team-->
+<!--        v-if="$page && $page.frontmatter && $page.frontmatter.picture"-->
+<!--        :path='"/team"'>-->
+<!--      </Team>-->
 
-      <Content v-else :custom="false"/>
+<!--      <Content v-else :custom="false"/>-->
 
     </div>
 
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-  import Team from "../../../components/Team";
+  import Team from "./Team";
   export default {
     name: 'TeamDetails',
     components: {Team},

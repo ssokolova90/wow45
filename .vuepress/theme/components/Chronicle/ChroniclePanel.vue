@@ -3,7 +3,7 @@
     v-if="item && item.frontmatter"
     :class="$blockClassName">
 
-    <router-link :to="item.path">
+    <router-link :to="$utf8(item.path)">
 
       <div
         :class="$e('image')"
@@ -32,7 +32,10 @@
 <script>
   export default {
     name: 'ChroniclePanel',
-    props: ['item']
+    props: ['item'],
+    mounted() {
+      console.log(this.item);
+    }
   };
 </script>
 

@@ -15,14 +15,11 @@
 
    <content-block>
 
-     <wow-block>
+     <wow-block style="margin-top: -130px;">
      </wow-block>
 
      <news-feed>
      </news-feed>
-
-     <theme :path="'/themes'">
-     </theme>
 
    </content-block>
 
@@ -49,13 +46,13 @@
     from '../../DeviceDetect.vue';
 
   import WowBlock
-    from "../../../components/WowBlock";
+    from "../WowBlock/WowBlock.vue";
 
   import NewsFeed
-    from "../../../components/NewsFeed";
+    from "../NewsFeed/NewsFeed";
 
   import Theme
-    from "../../../components/Theme";
+    from "../Theme/Theme";
 
   import ContentBlock
     from '../ContentBlock/ContentBlock';

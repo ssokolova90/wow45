@@ -19,7 +19,7 @@
     background-size: cover;
   }
 
-  &__person {
+  &__title {
     color: #000;
     font-size: 24px;
     font-style: normal;
@@ -29,10 +29,10 @@
     overflow: hidden;
     padding: 24px 11px 0px 11px;
     //width: 286px;
-
   }
 
-  &__position {
+  &__description {
+
     color: #D5AE75;
     font-size: 13px;
     font-style: normal;

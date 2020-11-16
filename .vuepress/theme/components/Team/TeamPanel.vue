@@ -1,7 +1,6 @@
 <template>
 
   <div
-    v-if="item && item.frontmatter"
     :class="$blockClassName">
 
     <router-link
@@ -11,17 +10,15 @@
       <div
         :class="$e('image')"
         :style="{backgroundImage: 'url(' + item.frontmatter.picture + ')' }"
-        v-if="item.frontmatter.picture"
-        >
+        v-if="item.frontmatter.picture">
       </div>
 
-      <div :class="$e('person')">
-        {{ item.frontmatter.first_name }}
-        {{ item.frontmatter.last_name }}
+      <div :class="$e('title')">
+        {{ item.title }}
       </div>
 
-      <div :class="$e('position')">
-        {{item.frontmatter.position}}
+      <div :class="$e('description')">
+        {{item.description}}
       </div>
     </router-link>
   </div>
@@ -31,7 +28,7 @@
 <script>
   export default {
     name: 'TeamPanel',
-    props: ['item']
+    props: ['item'],
   }
 </script>
 

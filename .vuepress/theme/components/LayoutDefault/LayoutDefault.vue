@@ -1,19 +1,46 @@
 <template>
   <div :class="$blockClassName">
 
-    <device-detect>
-    </device-detect>
-
     <navbar
       :modifier="'default'">
     </navbar>
 
     <content-block>
 
-      <component
-        v-if="componentNameValue"
-        :is="componentNameValue">
-      </component>
+      <people
+        v-if="firstLevelPage === 'peoplealbum'"
+        :path="'/peoplealbum'">
+      </people>
+
+
+
+<!--      <div-->
+<!--        v-if="!firstLevelPage && componentNameValue"-->
+<!--        :is="componentNameValue">-->
+<!--         {{  componentNameValue }}-->
+
+<!--        <div>-->
+<!--          {{ JSON.stringify($page) }}-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <component-->
+<!--        v-if="!firstLevelPage && componentNameValue"-->
+<!--        :is="componentNameValue">-->
+<!--      </component>-->
+
+<!--      <div v-else>-->
+<!--        <div>-->
+<!--          {{ componentNameValue }}-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--          {{ JSON.stringify($page) }}-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <Content v-else :custom="false"/>-->
+
+<!--      <Content :custom="false"/>-->
 
     </content-block>
 
@@ -35,23 +62,23 @@
   import ContentBlock
     from '../ContentBlock/ContentBlock';
 
-  import ChronicleDetails
-    from '../Chronicle/ChronicleDetails.vue';
+  import ChronicleItem
+    from '../Chronicle/ChronicleItem.vue';
 
-  import PeopleDetails
-    from '../People/PeopleDetails.vue';
+  import PeopleItem
+    from '../People/PeopleItem.vue';
 
-  import PhotoDetails
-    from '../Photo/PhotoDetails.vue';
+  import PhotoItem
+    from '../Photo/PhotoItem.vue';
 
-  import TeamDetails
-    from '../Team/TeamDetails.vue';
+  import TeamItem
+    from '../Team/TeamItem.vue';
 
-  import ThemeDetails
-    from '../Theme/ThemeDetails.vue';
+  import ThemeItem
+    from '../Theme/ThemeItem.vue';
 
-  import VideoDetails
-    from '../Video/VideoDetails.vue';
+  import VideoItem
+    from '../Video/VideoItem.vue';
 
   import $veg
     from '../../helpers/veg.js';
@@ -64,12 +91,12 @@
       Navbar,
       ContentBlock,
       DeviceDetect,
-      ChronicleDetails,
-      PeopleDetails,
-      PhotoDetails,
-      TeamDetails,
-      ThemeDetails,
-      VideoDetails
+      ChronicleItem,
+      PeopleItem,
+      PhotoItem,
+      TeamItem,
+      ThemeItem,
+      VideoItem
     },
 
     computed: {
@@ -77,6 +104,12 @@
       componentNameValue() {
         return $veg.getComponentName(this.$page);
       },
+
+      firstLevelPage() {
+        let flv = $veg.getFirstLevelPage(this.$page);
+        console.log('FIRST LAYER', flv);
+        return flv;
+      }
     }
   }
 </script>

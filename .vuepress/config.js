@@ -37,27 +37,27 @@ module.exports = {
     nav: [
       {
         text: 'Команда проекта',
-        link: '/team/'
+        link: '/teamalbum/'
       },
       {
         text: 'Хроника',
-        link: '/chronicle/',
+        link: '/chroniclealbum/',
       },
       {
         text: 'Темы парада памяти',
-        link: '/themes/',
+        link: '/themesalbum/',
       },
       {
         text: 'Участники',
-        link: '/people/'
+        link: '/peoplealbum/'
       },
       {
         text: 'Фотогаллерея',
-        link: '/photo/',
+        link: '/photoalbum/',
       },
       {
         text: 'Видео',
-        link: '/video/',
+        link: '/about/',
       },
       {
         text: 'Контакты',

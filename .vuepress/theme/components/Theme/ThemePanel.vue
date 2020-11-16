@@ -4,7 +4,8 @@
     v-if="item && item.frontmatter"
     :class="$blockClassName">
 
-    <router-link :to="item.path">
+    <router-link
+      :to="item.path">
 
       <div
         :class="$e('image')"

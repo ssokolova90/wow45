@@ -1,2 +1,0 @@
-<Photo :path='"/photo"'>
-</Photo>
