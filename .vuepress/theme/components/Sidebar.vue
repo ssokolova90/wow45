@@ -4,6 +4,7 @@
     <main-menu
       :modifier="'sidebar'"
       :items="mainMenuItems">
+
     </main-menu>
   </ul>
 </template>

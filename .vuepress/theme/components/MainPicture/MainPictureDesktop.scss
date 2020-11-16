@@ -1,3 +1,14 @@
 .main-picture--desktop {
   margin-top: -154px;
+
+  &__title {
+
+    color: #E6D4B6;
+    display: block;
+    position: absolute;
+    font-size: 36px;
+    left: 280px;
+    top: 476px;
+    width: 1006px;
+  }
 }

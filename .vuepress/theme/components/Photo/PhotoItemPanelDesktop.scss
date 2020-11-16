@@ -1,0 +1,28 @@
+.photo-item-panel--desktop {
+  display: flex;
+  background: white;
+  width: 307px;
+  height: 430px;
+  overflow: hidden;
+
+  &__image {
+    display: flex;
+    background: white;
+    overflow: hidden;
+    width: 308px;
+    height: 247px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 40px 30px;
+  }
+}
+

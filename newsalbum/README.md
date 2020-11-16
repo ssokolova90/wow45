@@ -1,0 +1,1 @@
+<news :path="'/newsalbum'"></news>

@@ -7,40 +7,12 @@
 
     <content-block>
 
-      <people
-        v-if="firstLevelPage === 'peoplealbum'"
-        :path="'/peoplealbum'">
-      </people>
+      <component
+        v-if="componentNameValue"
+        :is="componentNameValue">
+      </component>
 
-
-
-<!--      <div-->
-<!--        v-if="!firstLevelPage && componentNameValue"-->
-<!--        :is="componentNameValue">-->
-<!--         {{  componentNameValue }}-->
-
-<!--        <div>-->
-<!--          {{ JSON.stringify($page) }}-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <component-->
-<!--        v-if="!firstLevelPage && componentNameValue"-->
-<!--        :is="componentNameValue">-->
-<!--      </component>-->
-
-<!--      <div v-else>-->
-<!--        <div>-->
-<!--          {{ componentNameValue }}-->
-<!--        </div>-->
-
-<!--        <div>-->
-<!--          {{ JSON.stringify($page) }}-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <Content v-else :custom="false"/>-->
-
-<!--      <Content :custom="false"/>-->
+      <Content v-else :custom="false"/>
 
     </content-block>
 
@@ -104,12 +76,6 @@
       componentNameValue() {
         return $veg.getComponentName(this.$page);
       },
-
-      firstLevelPage() {
-        let flv = $veg.getFirstLevelPage(this.$page);
-        console.log('FIRST LAYER', flv);
-        return flv;
-      }
     }
   }
 </script>

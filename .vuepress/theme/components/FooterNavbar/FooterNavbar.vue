@@ -3,7 +3,14 @@
   <footer :class="$blockClassName">
 
     <div :class="$e('title')">
-      © Парад Памяти, посвящённый военному параду в г. Куйбышеве 7 ноября 1941 года.
+
+      <div>
+        © Парад Памяти, посвящённый военному параду в г. Куйбышеве 7 ноября 1941 года.
+      </div>
+
+      <social-networks style="padding-top: 30px">
+      </social-networks>
+
     </div>
 
     <main-menu
@@ -20,9 +27,13 @@
   import MainMenu
     from '../MainMenu/MainMenu.vue';
 
+  import SocialNetworks
+    from '../SocialNetworks/SocialNetworks.vue';
+
   export default {
     name: 'FooterNavbar',
     components: {
+      SocialNetworks,
       MainMenu
     },
     computed: {

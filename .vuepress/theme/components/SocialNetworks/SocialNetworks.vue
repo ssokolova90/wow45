@@ -1,0 +1,58 @@
+<template>
+
+  <div :class="$blockClassName">
+
+    <a
+      v-for="network in socialNetworksList"
+      :class="$e('link')"
+      :href="network.url">
+
+      <img
+        :src="network.icon"
+        v-if="network"
+        :alt="network.name"
+        :class="$e('image')">
+
+    </a>
+  </div>
+
+</template>
+
+
+<script>
+
+  export default {
+    name: 'SocialNetworks',
+    data() {
+      return {
+        networks: [
+          {name: 'Facebook', icon: 'fb.svg', title: 'Facebook', url: 'https://facebook.com'},
+          {name: 'Google+', icon: 'gp.svg', title: 'Google+', url: 'https://myaccount.google.com'},
+          {name: 'Instagram', icon: 'inst.svg', title: 'Instagram', url: 'https://instagram.com'},
+          {name: 'OK', icon: 'ok.svg', title: 'OK', url: 'https://ok.ru'},
+          {name: 'Twitter', icon: 'tw.svg', title: 'Twitter', url: 'https://twitter.com'},
+          {name: 'Vkontakte', icon: 'vk.svg', title: 'Vkontakte', url: 'https://vk.com'},
+        ]
+      }
+    },
+    computed: {
+
+      socialNetworksList() {
+        return this.networks.map(network => {
+
+          return {
+            ...network,
+            icon:  this.$withBase('/images/assets/social/' + network.icon)
+          }
+        })
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+
+  @import './SocialNetworksDesktop.scss';
+  @import './SocialNetworksMobile.scss';
+
+</style>

@@ -1,0 +1,1 @@
+<theme :path="'/themesalbum'"></theme>

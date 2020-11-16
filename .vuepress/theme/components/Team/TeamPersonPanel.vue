@@ -1,10 +1,10 @@
 <template>
+
   <div
-    v-if="item && item.frontmatter"
     :class="$blockClassName">
 
     <router-link
-      :to="{ path: item.path }"
+      :to="item.path"
       :class="$e('router-link')">
 
       <div
@@ -14,9 +14,13 @@
       </div>
 
       <div :class="$e('title')">
-        {{ item.frontmatter.title }}
+        {{ item.frontmatter.last_name }}
+        {{ item.frontmatter.first_name }}
       </div>
 
+      <div :class="$e('description')">
+        {{ item.frontmatter.position }}
+      </div>
     </router-link>
   </div>
 
@@ -24,17 +28,14 @@
 
 <script>
   export default {
-    name: 'PeoplePanel',
+    name: 'TeamPersonPanel',
     props: ['item'],
-    mounted() {
-      console.log(this.item)
-    }
   }
 </script>
 
 <style lang="scss">
 
-  @import './PeoplePanelDesktop.scss';
-  @import './PeoplePanelMobile.scss';
+  @import './TeamPersonPanelDesktop.scss';
+  @import './TeamPersonPanelMobile.scss';
 
 </style>

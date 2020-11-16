@@ -45,20 +45,6 @@ export default {
       && detailPath[1].length == 0;
   },
 
-  getFirstLevelPage($page) {
-
-    const detailPath = $page.regularPath.split('/');
-
-    if (detailPath.length === 3
-      && detailPath[1].length
-      && !detailPath[2].length) {
-
-      return detailPath[1];
-    }
-
-    return null;
-  },
-
   getComponentName($page) {
 
     const componentsMap = {

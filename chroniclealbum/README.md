@@ -1,0 +1,1 @@
+<chronicle :path="'/chroniclealbum'"></chronicle>
