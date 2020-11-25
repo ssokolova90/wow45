@@ -1,1 +1,0 @@
-<people :path="'/peoplealbum'"></people>
