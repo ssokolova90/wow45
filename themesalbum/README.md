@@ -1,5 +1,5 @@
 ---
-title: Парад Памяти 2018 года
+title: Парад Памяти 2018 года. "Оружие Победы"
 description: Оружие Победы
 picture: /images/uploads/dsc_1082.jpg
 date: 2018-11-07T18:00:00.000Z
