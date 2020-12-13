@@ -46,13 +46,23 @@
     computed: {
 
       socialNetworksList() {
-        return this.networks.map(network => {
 
-          return {
-            ...network,
-            icon:  this.$withBase('/images/assets/social/' + network.icon)
+        let socials = this.$pages('/social') || [];
+
+
+        return socials.map(social => {
+
+          if (!social || !social.frontmatter) {
+            return {
+            };
           }
-        })
+
+          return  {
+            title: social.frontmatter.title,
+            url: social.frontmatter.url,
+            icon:  this.$withBase('/images/assets/social/' + this.icons[social.frontmatter.Network])
+          };
+        });
       }
 
     }

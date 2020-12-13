@@ -16,6 +16,9 @@
 <script>
   export default {
     name: 'MainPicture',
+    computed: {
+
+    }
   }
 </script>
 
