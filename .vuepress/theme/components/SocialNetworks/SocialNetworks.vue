@@ -32,7 +32,15 @@
           {name: 'OK', icon: 'ok.svg', title: 'OK', url: 'https://ok.ru'},
           {name: 'Twitter', icon: 'tw.svg', title: 'Twitter', url: 'https://twitter.com'},
           {name: 'Vkontakte', icon: 'vk.svg', title: 'Vkontakte', url: 'https://vk.com'},
-        ]
+        ],
+        icons: {
+          'vkontake': 'vk.svg',
+          'odnoklassniki': 'ok.svg',
+          'instagram': 'inst.svg',
+          'facebook': 'fb.svg',
+          'twitter': 'tw.svg',
+          'googleplus': 'gp.svg',
+        }
       }
     },
     computed: {
@@ -46,6 +54,7 @@
           }
         })
       }
+
     }
   }
 </script>

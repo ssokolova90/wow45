@@ -1,0 +1,1 @@
+<team :path="'/teamalbum'"></team>
