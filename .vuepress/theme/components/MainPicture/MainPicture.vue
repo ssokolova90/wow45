@@ -10,9 +10,15 @@
       {{ logo.title }}
     </div>
 
-<!--    <div v-for="logo in logoList">-->
-<!--      {{ JSON.stringify(logo) }}-->
-<!--    </div>-->
+    <div :class="$e('paginator')">
+
+      <div
+        v-for="(logo, index) in logoList"
+        :class="(index === selectedLogo) ? $e('paginator-button') : $e('paginator-button','selected')"
+        @click="setLogo(index)">
+
+      </div>
+    </div>
 
   </div>
 
@@ -53,13 +59,15 @@
           };
         });
 
-        console.log('LogoList', logoList);
-
         return logoList;
       }
 
     },
     methods: {
+      setLogo(number) {
+
+        this.selectedLogo = (+number < this.logoList.length) ? +number : 0;
+      },
       nextLogo() {
 
         let nextSelected = this.selectedLogo + 1;
@@ -69,6 +77,11 @@
         this.selectedLogo = nextSelected;
       }
     },
+    mounted() {
+      setInterval(()=> {
+        this.nextLogo();
+      }, 10000);
+    }
   }
 </script>
 
