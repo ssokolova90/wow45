@@ -5,26 +5,33 @@
       {{ this.$page.frontmatter.title }}
     </div>
 
-
     <div :class="$e('posts')">
 
-      <chronicle-panel
-        v-for="post in $items($page.frontmatter.Chronicle)"
-        :item="post">
-      </chronicle-panel>
+      <chronicle-album-card
+          :items="$items($page.frontmatter.Chronicle)">
 
+      </chronicle-album-card>
     </div>
+
+    <chronicle :path="'/chronicle'">
+    </chronicle>
+
   </div>
 </template>
 
 <script>
-  import ChroniclePanel
-    from './ChroniclePanel';
+
+  import ChronicleAlbumCard
+    from "./ChronicleAlbumCard";
+
+  import Chronicle
+    from "./Chronicle";
 
   export default {
     name: 'ChronicleItem',
     components: {
-      ChroniclePanel
+      ChronicleAlbumCard,
+      Chronicle
     },
     props: ['path'],
   };

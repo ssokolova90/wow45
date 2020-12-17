@@ -1,0 +1,71 @@
+.theme-album-card--desktop {
+  display: flex;
+  height: 800px;
+  width: 100%;
+  flex-direction: row;
+  padding: 30px;
+
+  &__photo-slider {
+
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+
+  &__prev-button {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__slide-position {
+    font-size: 16px;
+    color: #D5AE75;
+  }
+
+  &__slider-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__next-button {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__slide-info {
+
+    height: 100%;
+    width: 367px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    height: 120px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 16px;
+    flex: 1;
+  }
+
+  &__event-date {
+    font-size: 16px;
+    border-top: solid 1px #B3B3B3;
+    height: 47px;
+  }
+}

@@ -35,11 +35,11 @@
     <div :class="$e('slide-info')">
 
       <div :class="$e('title')">
-        {{ slide ? slide.title : '' }}
+        {{ slide ? slide.description : '' }}
       </div>
 
       <div :class="$e('description')">
-        {{ slide ? slide.description : '' }}
+        {{ slide ? slide.title : '' }}
       </div>
 
       <div :class="$e('event-date')">
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  name: 'PhotoAlbumCard',
+  name: 'ThemeAlbumCard',
   props: ['items'],
   data() {
     return {
@@ -80,7 +80,7 @@ export default {
     prevImage() {
 
       if (!this.items
-        || !this.items.length) {
+          || !this.items.length) {
 
         this.slidePosition = 0;
         return;
@@ -93,14 +93,14 @@ export default {
     nextImage() {
 
       if (!this.items
-        || !this.items.length) {
+          || !this.items.length) {
 
         this.slidePosition = 0;
         return;
       }
 
-      if (this.slidePosition + 1  < this.items.length) {
-        this.slidePosition += 1
+      if (this.slidePosition + 1 < this.items.length) {
+        this.slidePosition += 1;
       } else {
         this.slidePosition = 0;
       }
@@ -111,7 +111,7 @@ export default {
 
 <style lang="scss">
 
-@import './PhotoAlbumCardDesktop.scss';
-@import './PhotoAlbumCardMobile.scss';
+@import './ThemeAlbumCardDesktop.scss';
+@import './ThemeAlbumCardMobile.scss';
 
 </style>

@@ -7,29 +7,31 @@
 
     <div :class="$e('posts')">
 
-      <theme-panel
-        v-for="(theme, index) in $items($page.frontmatter.theme)"
-        :doubleSize="index < 2"
-        :key="index"
-        :item="theme">
+      <theme-album-card
+          :items="$items($page.frontmatter.theme)">
 
-      </theme-panel>
+      </theme-album-card>
+
     </div>
+
   </div>
 
 </template>
 
-
 <script>
 
-  import ThemePanel
-    from './ThemePanel';
+  import ThemeAlbumCard
+    from "./ThemeAlbumCard";
+
+  import Theme
+    from  './Theme';
 
   export default {
     name: 'Theme',
     props: ['path'],
     components: {
-      ThemePanel
+      ThemeAlbumCard,
+      Theme
     }
   };
 </script>

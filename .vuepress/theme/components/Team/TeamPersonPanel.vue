@@ -1,6 +1,7 @@
 <template>
 
   <div
+    @click="$emit('click')"
     :class="$blockClassName">
 
     <router-link

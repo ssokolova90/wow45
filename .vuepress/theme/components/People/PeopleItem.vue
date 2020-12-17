@@ -7,25 +7,32 @@
 
     <div :class="$e('posts')">
 
-      <people-panel
-        v-for="(people, index) in $items($page.frontmatter.Member)"
-        :key="index"
-        :item="people">
-      </people-panel>
+      <people-album-card
+          :items="$items($page.frontmatter.Member)">
+
+      </people-album-card>
     </div>
+
+    <people :path="'/people'">
+    </people>
+
   </div>
 </template>
 
 <script>
 
-  import PeoplePanel
-    from './PeoplePanel';
+  import PeopleAlbumCard
+    from "./PeopleAlbumCard";
+
+  import People
+    from "./People";
 
   export default {
     name: 'PeopleItem',
     props: ['path'],
     components: {
-      PeoplePanel
+      PeopleAlbumCard,
+      People
     },
     mounted() {
       console.log(this.$page);

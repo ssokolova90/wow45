@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  name: 'PhotoAlbumCard',
+  name: 'ChronicleAlbumCard',
   props: ['items'],
   data() {
     return {
@@ -80,7 +80,7 @@ export default {
     prevImage() {
 
       if (!this.items
-        || !this.items.length) {
+          || !this.items.length) {
 
         this.slidePosition = 0;
         return;
@@ -93,7 +93,7 @@ export default {
     nextImage() {
 
       if (!this.items
-        || !this.items.length) {
+          || !this.items.length) {
 
         this.slidePosition = 0;
         return;
@@ -111,7 +111,7 @@ export default {
 
 <style lang="scss">
 
-@import './PhotoAlbumCardDesktop.scss';
-@import './PhotoAlbumCardMobile.scss';
+@import './ChronicleAlbumCardDesktop.scss';
+@import './ChronicleAlbumCardMobile.scss';
 
 </style>
