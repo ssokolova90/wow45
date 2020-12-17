@@ -5,6 +5,7 @@
     :class="$blockClassName">
 
     <router-link
+      :class="$e('image-wrapper')"
       :to="item.path">
 
       <div

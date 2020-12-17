@@ -7,13 +7,13 @@
 
     <div :class="$e('posts')">
 
-      <theme-panel
-        v-for="(chronicle, index) in $pages('/chroniclealbum')"
-        :item="chronicle"
+      <news-card
+        v-for="(news, index) in $pages('/news')"
+        :item="news"
         :key="index"
-        :doubleSize="index < 2">
+        :modifier=" index < 2 ? 'double' : null">
 
-      </theme-panel>
+      </news-card>
 
     </div>
   </div>
@@ -26,10 +26,13 @@
   import ThemePanel
     from '../Theme/ThemePanel';
 
+  import NewsCard
+    from './NewsCard';
+
   export default {
     name: 'NewsFeed',
     components: {
-      ThemePanel
+      NewsCard
     },
   };
 </script>
