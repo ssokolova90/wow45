@@ -7,15 +7,15 @@
 
     <div :class="$e('posts')">
 
-      <photo-item-panel
-        v-for="(photo, index) in  $items($page.frontmatter.Photo)"
-        :item="photo"
-        :key="index"
-        :doubleSize="index < 2">
+        <photo-album-card
+          :items="$items($page.frontmatter.Photo)">
 
-      </photo-item-panel>
-
+        </photo-album-card>
     </div>
+
+    <photo :path='"/photo"'>
+    </photo>
+
   </div>
 
 </template>
@@ -25,10 +25,18 @@
   import PhotoItemPanel
     from './PhotoItemPanel';
 
+  import PhotoAlbumCard
+    from "./PhotoAlbumCard";
+
+  import Photo
+    from "./Photo";
+
   export default {
     name: 'PhotoItem',
     components: {
-      PhotoItemPanel
+      PhotoItemPanel,
+      PhotoAlbumCard,
+      Photo
     },
     props: ['path']
   };
