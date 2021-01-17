@@ -21,12 +21,9 @@
       <div :class="$e('position')">
         {{ $page.frontmatter.position }}
       </div>
-
-      <Content :custom="false"/>
-
     </div>
 
-<!--    <people :path="'/people'">-->
+ <!--    <people :path="'/people'">-->
 <!--    </people>-->
 
   </div>

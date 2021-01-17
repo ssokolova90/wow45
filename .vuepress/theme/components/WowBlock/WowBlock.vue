@@ -8,10 +8,10 @@
         :item="lastTheme">
       </main-chronicle-panel>
 
-      <people-panel
-        v-for="people in $pages('/people', 2)"
-        :item="people">
-      </people-panel>
+      <comment-panel
+        v-for="comment in $pages('/Commments', 2)"
+        :item="comment">
+      </comment-panel>
 
     </div>
   </div>
@@ -21,13 +21,13 @@
   import MainChroniclePanel
     from '../Chronicle/MainChroniclePanel';
 
-  import PeoplePanel
-    from '../People/PeoplePanel';
+  import CommentPanel
+    from '../Comments/CommentPanel';
 
   export default {
     name: 'WowBlock',
     components: {
-      PeoplePanel,
+      CommentPanel,
       MainChroniclePanel
     },
   };

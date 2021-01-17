@@ -24,21 +24,8 @@
           {{ $page.frontmatter.position }}
         </div>
 
-<!--        <Content :custom="false"/>-->
-
       </div>
-
-<!--      <chronicle-->
-<!--        :path="'/chronicle'">-->
-<!--      </chronicle>-->
-
     </div>
-
-<!--    <chronicle-->
-<!--      v-else-->
-<!--      :path="'/chronicle'">-->
-<!--    </chronicle>-->
-
   </div>
 
 </template>

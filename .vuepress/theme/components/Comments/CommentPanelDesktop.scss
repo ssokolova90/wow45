@@ -1,0 +1,49 @@
+.comment-panel--desktop {
+  display: flex;
+  background: white;
+  overflow: hidden;
+
+  width: 308px;
+  height: 360px;
+
+  &__router-link {
+  }
+
+  &__image {
+
+    display: flex;
+    background: white;
+    overflow: hidden;
+    width: 318px;
+    height: 360px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    padding: 40px 15px 15px 30px;
+    height: 41px;
+    overflow: hidden;;
+
+    position: relative;
+    top: -120px;
+    color: white;
+  }
+
+  &__description {
+
+    font-size: 18px;
+    line-height: 28px;
+    padding: 3px;
+    height: 41px;
+    overflow: hidden;
+
+    position: relative;
+    top: -140px;
+    color: white;
+  }
+}

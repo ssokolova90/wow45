@@ -53,23 +53,12 @@ export default {
       'photoalbum': 'PhotoItem',
       'teamalbum': 'TeamItem',
       'themesalbum': 'ThemeItem',
+      'Commments': 'CommentItem'
     };
 
     // если нужно вывести список первого уровня
 
     const detailPath = $page.regularPath.split('/');
-
-    console.log ('detailPath', detailPath);
-
-    // if (detailPath.length === 3
-    //     && detailPath[1].length
-    //     && !detailPath[2].length
-    //     && componentsMap[detailPath[1]]) {
-    //
-    //   return componentsMap[detailPath[1]];
-    // }
-    //
-    // return null;
 
     if (!detailPath[2] || !detailPath[2].length) {
       return null;

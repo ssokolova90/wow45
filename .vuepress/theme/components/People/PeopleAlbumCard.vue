@@ -38,9 +38,15 @@
         {{ slide ? slide.title : '' }}
       </div>
 
+      <div :class="$e('content')">
+        {{ slide.body }}
+      </div>
+
+
       <div :class="$e('description')">
         {{ slide ? slide.description : '' }}
       </div>
+
 
       <div :class="$e('event-date')">
         {{ slide ? slide.date : '' }}

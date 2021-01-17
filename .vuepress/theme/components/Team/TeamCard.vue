@@ -23,6 +23,10 @@
           {{ item.frontmatter.position }}
         </div>
 
+        <div :class="$e('content')">
+          {{ item.frontmatter.body }}
+        </div>
+
       </div>
 
     </div>
