@@ -53,7 +53,8 @@ export default {
       'photoalbum': 'PhotoItem',
       'teamalbum': 'TeamItem',
       'themesalbum': 'ThemeItem',
-      'Commments': 'CommentItem'
+      'Commments': 'CommentItem',
+      'news': 'NewsItem',
     };
 
     // если нужно вывести список первого уровня

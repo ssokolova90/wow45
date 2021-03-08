@@ -2,12 +2,6 @@
 
   <div :class="$blockClassName">
 
-    <!-- <Content :custom="false"/> -->
-
-    <!--
-        {{ JSON.stringify($page.frontmatter, null, ' ') }}
-    -->
-
     <comment-card :item="$page">
     </comment-card>
 
