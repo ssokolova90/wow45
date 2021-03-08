@@ -52,6 +52,9 @@
   import VideoItem
     from '../Video/VideoItem.vue';
 
+  import CommentItem
+    from '../Comments/CommentItem.vue';
+
   import $veg
     from '../../helpers/veg.js';
 
@@ -68,7 +71,8 @@
       PhotoItem,
       TeamItem,
       ThemeItem,
-      VideoItem
+      VideoItem,
+      CommentItem
     },
 
     computed: {
